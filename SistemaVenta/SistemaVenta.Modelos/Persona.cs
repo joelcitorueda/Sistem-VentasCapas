@@ -1,4 +1,4 @@
-﻿namespace SIstemaVentas.DAL
+﻿namespace SistemaVenta.Modelos
 {
 	public class Persona
 	{
@@ -9,5 +9,6 @@
 		public string Ci { get; set; }
 		public string Correo { get; set; }
 		public string Estado { get; set; }
+
 	}
 }
