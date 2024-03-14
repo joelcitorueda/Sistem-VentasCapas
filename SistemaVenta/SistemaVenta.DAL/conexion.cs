@@ -15,7 +15,7 @@ namespace SystemaVenta.DAL
 
 		public static string CONECTAR
 		{
-			get { return @"Data Source=DESKTOP-EROEUF5; Initial Catalog=TIENDITABD; Integrated Security=True; TrustServerCertificate=true;"; }
+			get { return @"Data Source=DESKTOP-EROEUF5; Initial Catalog=master; Integrated Security=True; TrustServerCertificate=true;"; }
 			//get { return ConfigurationManager.ConnectionStrings["cadena"].ToString(); }
 		}
 		public static DataSet EjecutarDataSet(string consulta)

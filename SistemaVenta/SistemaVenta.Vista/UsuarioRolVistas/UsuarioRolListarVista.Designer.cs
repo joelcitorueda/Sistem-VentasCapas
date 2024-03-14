@@ -41,14 +41,14 @@
 			dataGridView1.Name = "dataGridView1";
 			dataGridView1.ReadOnly = true;
 			dataGridView1.RowHeadersWidth = 51;
-			dataGridView1.Size = new Size(680, 426);
+			dataGridView1.Size = new Size(931, 426);
 			dataGridView1.TabIndex = 0;
 			// 
 			// UsuarioRolListarVista
 			// 
 			AutoScaleDimensions = new SizeF(8F, 20F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(708, 450);
+			ClientSize = new Size(955, 450);
 			Controls.Add(dataGridView1);
 			Name = "UsuarioRolListarVista";
 			Text = "UsuarioRolListarVista";
