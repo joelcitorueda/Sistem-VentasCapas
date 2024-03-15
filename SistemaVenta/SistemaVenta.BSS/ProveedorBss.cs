@@ -1,4 +1,5 @@
 ﻿using SistemaVenta.DAL;
+using SistemaVenta.Modelos;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -14,6 +15,10 @@ namespace SistemaVenta.BSS
 		public DataTable ListarProveedoresBss()
 		{
 			return dal.ListarProveedoresDal();
+		}
+		public void InsertarProveedorBss(Proveedor proveedor)
+		{
+			dal.InsertarProveedorDal(proveedor);
 		}
 	}
 }

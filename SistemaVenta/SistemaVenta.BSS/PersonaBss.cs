@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SistemaVenta.DAL;
-
+using SistemaVenta.Modelos;
 
 namespace SistemaVenta.BSS
 {
@@ -15,6 +15,11 @@ namespace SistemaVenta.BSS
 		public DataTable ListarPersonaBss()
 		{
 			return dal.ListarPersonasDal();
+		}
+
+		public void InsertarPersonaBss(Persona persona)
+		{
+			dal.InsertarPersonaDal(persona);
 		}
 	}
 }

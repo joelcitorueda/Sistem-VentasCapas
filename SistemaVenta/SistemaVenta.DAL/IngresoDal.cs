@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SistemaVenta.Modelos;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -16,5 +17,13 @@ namespace SistemaVenta.DAL
 			DataTable lista = conexion.EjecutarDataTabla(consulta, "tabla");
 			return lista;
 		}
+		public void InsertarIngresoDal(Ingreso ingreso)
+		{
+			string consulta = "insert into ingreso values(" + ingreso.IdProveedor + " , " +
+															  "'" + ingreso.FechaIngreso.ToString("yyyy-MM-dd HH:mm:ss") + "' , " +
+															  ingreso.Total + " , 'Activo')";
+			conexion.Ejecutar(consulta);
+		}
+
 	}
 }
