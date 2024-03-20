@@ -20,6 +20,18 @@ namespace SistemaVenta.BSS
 		{
 			dal.InsertarUsuarioDal(usuario);
 		}
+		public Usuario ObtenerUsuarioIdBss(int id)
+		{
+			return dal.ObtenerUsuarioIdDal(id);
+		}
+		public void EditarUsuarioBss(Usuario p)
+		{
+			dal.EditarUsuarioDal(p);
+		}
+		public void EliminarUsuarioBss(int id)
+		{
+			dal.EliminarUsuarioDal(id);
+		}
 
 	}
 }

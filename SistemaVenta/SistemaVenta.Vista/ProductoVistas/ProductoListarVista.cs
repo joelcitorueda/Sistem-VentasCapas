@@ -22,5 +22,10 @@ namespace SistemaVenta.Vista.ProductoVistas
 		{
 			dataGridView1.DataSource = bss.ListarProductosBss();
 		}
+
+		private void button1_Click(object sender, EventArgs e)
+		{
+
+		}
 	}
 }

@@ -1,5 +1,6 @@
 ﻿using SistemaVenta.BSS;
 using SistemaVenta.Modelos;
+using SistemaVenta.Vista.PersonasVistas;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -28,6 +29,10 @@ namespace SistemaVenta.Vista.TipoProdVistas
 			bss.InsertarTipoProdBss(tipoProd);
 			MessageBox.Show("Se guardó correctamente el tipo de producto");
 		}
-
+		
+		private void button3_Click(object sender, EventArgs e)
+		{
+			
+		}
 	}
 }

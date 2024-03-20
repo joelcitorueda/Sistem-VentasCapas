@@ -43,6 +43,8 @@
 			textBox5 = new TextBox();
 			textBox6 = new TextBox();
 			button2 = new Button();
+			button3 = new Button();
+			button4 = new Button();
 			SuspendLayout();
 			// 
 			// button1
@@ -169,11 +171,31 @@
 			button2.Text = "CANCELAR";
 			button2.UseVisualStyleBackColor = true;
 			// 
+			// button3
+			// 
+			button3.Location = new Point(449, 68);
+			button3.Name = "button3";
+			button3.Size = new Size(174, 35);
+			button3.TabIndex = 15;
+			button3.Text = "SELECCIONAR";
+			button3.UseVisualStyleBackColor = true;
+			// 
+			// button4
+			// 
+			button4.Location = new Point(449, 131);
+			button4.Name = "button4";
+			button4.Size = new Size(174, 35);
+			button4.TabIndex = 16;
+			button4.Text = "SELECCIONAR";
+			button4.UseVisualStyleBackColor = true;
+			// 
 			// ProductoInsertarVista
 			// 
 			AutoScaleDimensions = new SizeF(8F, 20F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(556, 485);
+			ClientSize = new Size(660, 485);
+			Controls.Add(button4);
+			Controls.Add(button3);
 			Controls.Add(button2);
 			Controls.Add(textBox6);
 			Controls.Add(textBox5);
@@ -212,5 +234,7 @@
 		private TextBox textBox5;
 		private TextBox textBox6;
 		private Button button2;
+		private Button button3;
+		private Button button4;
 	}
 }

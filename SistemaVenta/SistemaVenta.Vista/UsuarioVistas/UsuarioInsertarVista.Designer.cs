@@ -39,11 +39,12 @@
 			textBox2 = new TextBox();
 			textBox3 = new TextBox();
 			textBox4 = new TextBox();
+			button3 = new Button();
 			SuspendLayout();
 			// 
 			// button1
 			// 
-			button1.Location = new Point(130, 331);
+			button1.Location = new Point(242, 331);
 			button1.Name = "button1";
 			button1.Size = new Size(119, 34);
 			button1.TabIndex = 0;
@@ -72,14 +73,14 @@
 			label2.AutoSize = true;
 			label2.Location = new Point(93, 103);
 			label2.Name = "label2";
-			label2.Size = new Size(93, 20);
+			label2.Size = new Size(74, 20);
 			label2.TabIndex = 3;
-			label2.Text = "ID PERSONA";
+			label2.Text = "PERSONA";
 			// 
 			// label3
 			// 
 			label3.AutoSize = true;
-			label3.Location = new Point(27, 156);
+			label3.Location = new Point(93, 153);
 			label3.Name = "label3";
 			label3.Size = new Size(159, 20);
 			label3.TabIndex = 4;
@@ -88,7 +89,7 @@
 			// label4
 			// 
 			label4.AutoSize = true;
-			label4.Location = new Point(82, 210);
+			label4.Location = new Point(93, 206);
 			label4.Name = "label4";
 			label4.Size = new Size(104, 20);
 			label4.TabIndex = 5;
@@ -97,7 +98,7 @@
 			// label5
 			// 
 			label5.AutoSize = true;
-			label5.Location = new Point(132, 264);
+			label5.Location = new Point(93, 261);
 			label5.Name = "label5";
 			label5.Size = new Size(54, 20);
 			label5.TabIndex = 6;
@@ -105,39 +106,53 @@
 			// 
 			// button2
 			// 
-			button2.Location = new Point(337, 331);
+			button2.Location = new Point(450, 331);
 			button2.Name = "button2";
 			button2.Size = new Size(119, 34);
 			button2.TabIndex = 7;
 			button2.Text = "CANCELAR";
 			button2.UseVisualStyleBackColor = true;
+			button2.Click += button2_Click;
 			// 
 			// textBox2
 			// 
-			textBox2.Location = new Point(227, 153);
+			textBox2.Location = new Point(271, 150);
 			textBox2.Name = "textBox2";
-			textBox2.Size = new Size(229, 27);
+			textBox2.Size = new Size(345, 27);
 			textBox2.TabIndex = 8;
 			// 
 			// textBox3
 			// 
-			textBox3.Location = new Point(227, 207);
+			textBox3.Location = new Point(271, 203);
 			textBox3.Name = "textBox3";
-			textBox3.Size = new Size(229, 27);
+			textBox3.PasswordChar = '*';
+			textBox3.Size = new Size(345, 27);
 			textBox3.TabIndex = 9;
+			textBox3.UseSystemPasswordChar = true;
 			// 
 			// textBox4
 			// 
-			textBox4.Location = new Point(227, 261);
+			textBox4.Location = new Point(271, 258);
 			textBox4.Name = "textBox4";
-			textBox4.Size = new Size(229, 27);
+			textBox4.Size = new Size(345, 27);
 			textBox4.TabIndex = 10;
+			// 
+			// button3
+			// 
+			button3.Location = new Point(479, 100);
+			button3.Name = "button3";
+			button3.Size = new Size(137, 29);
+			button3.TabIndex = 11;
+			button3.Text = "SELECCIONAR";
+			button3.UseVisualStyleBackColor = true;
+			button3.Click += button3_Click;
 			// 
 			// UsuarioInsertarVista
 			// 
 			AutoScaleDimensions = new SizeF(8F, 20F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(527, 409);
+			ClientSize = new Size(692, 409);
+			Controls.Add(button3);
 			Controls.Add(textBox4);
 			Controls.Add(textBox3);
 			Controls.Add(textBox2);
@@ -168,5 +183,6 @@
 		private TextBox textBox2;
 		private TextBox textBox3;
 		private TextBox textBox4;
+		private Button button3;
 	}
 }

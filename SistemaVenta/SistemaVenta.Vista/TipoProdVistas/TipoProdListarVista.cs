@@ -1,4 +1,6 @@
 ﻿using SistemaVenta.BSS;
+using SistemaVenta.Vista.PersonaVistas;
+using SistemaVenta.Vista.UsuarioVistas;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,6 +23,41 @@ namespace SistemaVenta.Vista.TipoProdVistas
 		private void TipoProdListarVista_Load(object sender, EventArgs e)
 		{
 			dataGridView1.DataSource = bss.ListarTiposProductosBss();
+		}
+
+		private void button1_Click(object sender, EventArgs e)
+		{
+			///UsuarioInsertarVista.IdTipoProdSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+		}
+
+		private void button2_Click(object sender, EventArgs e)
+		{
+			TipoProdInsertarVista fr = new TipoProdInsertarVista();
+			if (fr.ShowDialog() == DialogResult.OK)
+			{
+				dataGridView1.DataSource = bss.ListarTiposProductosBss();
+			}
+		}
+
+		private void button3_Click(object sender, EventArgs e)
+		{
+			int IdSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+			TipoProdEditarVista fr = new TipoProdEditarVista(IdSeleccionada);
+			if (fr.ShowDialog() == DialogResult.OK)
+			{
+				dataGridView1.DataSource = bss.ListarTiposProductosBss();
+			}
+		}
+
+		private void button4_Click(object sender, EventArgs e)
+		{
+			int IdSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+			DialogResult result = MessageBox.Show("¿Esta seguro de Eliminar este TipoProd?", "Eliminando", MessageBoxButtons.YesNo);
+			if (result == DialogResult.Yes)
+			{
+				bss.EliminarTipoProdBss(IdSeleccionada);
+				dataGridView1.DataSource = bss.ListarTiposProductosBss();
+			}
 		}
 	}
 }

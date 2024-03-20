@@ -29,6 +29,10 @@
 		private void InitializeComponent()
 		{
 			dataGridView1 = new DataGridView();
+			button4 = new Button();
+			button3 = new Button();
+			button2 = new Button();
+			button1 = new Button();
 			((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
 			SuspendLayout();
 			// 
@@ -44,11 +48,56 @@
 			dataGridView1.Size = new Size(911, 426);
 			dataGridView1.TabIndex = 0;
 			// 
+			// button4
+			// 
+			button4.Location = new Point(480, 453);
+			button4.Name = "button4";
+			button4.Size = new Size(140, 44);
+			button4.TabIndex = 8;
+			button4.Text = "ELIMAR";
+			button4.UseVisualStyleBackColor = true;
+			//button4.Click += this.button4_Click;
+			// 
+			// button3
+			// 
+			button3.Location = new Point(309, 453);
+			button3.Name = "button3";
+			button3.Size = new Size(140, 44);
+			button3.TabIndex = 7;
+			button3.Text = "EDITAR";
+			button3.UseVisualStyleBackColor = true;
+			//button3.Click += this.button3_Click;
+			// 
+			// button2
+			// 
+			button2.Location = new Point(140, 453);
+			button2.Name = "button2";
+			button2.Size = new Size(140, 44);
+			button2.TabIndex = 6;
+			button2.Text = "AGREGAR";
+			button2.UseVisualStyleBackColor = true;
+			//button2.Click += this.button2_Click;
+			// 
+			// button1
+			// 
+			button1.DialogResult = DialogResult.OK;
+			button1.Location = new Point(685, 453);
+			button1.Name = "button1";
+			button1.Size = new Size(135, 44);
+			button1.TabIndex = 5;
+			button1.Text = "SELECCIONAR";
+			button1.UseVisualStyleBackColor = true;
+			button1.Click += button1_Click;
+			// 
 			// ProductoListarVista
 			// 
 			AutoScaleDimensions = new SizeF(8F, 20F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(949, 450);
+			ClientSize = new Size(949, 509);
+			Controls.Add(button4);
+			Controls.Add(button3);
+			Controls.Add(button2);
+			Controls.Add(button1);
 			Controls.Add(dataGridView1);
 			Name = "ProductoListarVista";
 			Text = "ProductoListarVista";
@@ -60,5 +109,9 @@
 		#endregion
 
 		private DataGridView dataGridView1;
+		private Button button4;
+		private Button button3;
+		private Button button2;
+		private Button button1;
 	}
 }

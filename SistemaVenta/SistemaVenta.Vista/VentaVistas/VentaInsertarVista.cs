@@ -1,5 +1,7 @@
 ﻿using SistemaVenta.BSS;
 using SistemaVenta.Modelos;
+using SistemaVenta.Vista.ClienteVistas;
+using SistemaVenta.Vista.UsuarioVistas;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,13 +26,36 @@ namespace SistemaVenta.Vista.VentaVistas
 		{
 			Venta venta = new Venta();
 			venta.IDCliente = Convert.ToInt32(textBox1.Text);
-			venta.IDVendedor = Convert.ToInt32(textBox2.Text); 
+			venta.IDVendedor = Convert.ToInt32(textBox2.Text);
 			venta.Fecha = DateTime.Now;
-			venta.Total = Convert.ToDecimal(textBox3.Text);
+			venta.Total = Convert.ToDecimal(textBox4.Text);
 
 			bss.InsertarVentaBss(venta);
 			MessageBox.Show("Se guardó correctamente la venta");
 		}
+		public static int IdClienteSeleccionada = 0;
+		ClienteBss bssclie = new ClienteBss();
 
+		private void button3_Click(object sender, EventArgs e)
+		{
+			ClienteListarVista fr = new ClienteListarVista();
+			if (fr.ShowDialog() == DialogResult.OK)
+			{
+				Cliente cliente = bssclie.ObtenerClienteIdBss(IdClienteSeleccionada);
+				textBox1.Text = cliente.IdCliente.ToString();
+			}
+		}
+		public static int IdVendedorSeleccionada = 0;
+		UsuarioBss bssven = new UsuarioBss();
+
+		private void button4_Click(object sender, EventArgs e)
+		{
+			UsuarioListarVista fr = new UsuarioListarVista();
+			if (fr.ShowDialog() == DialogResult.OK)
+			{
+				Usuario usuario = bssven.ObtenerUsuarioIdBss(IdVendedorSeleccionada);
+				textBox2.Text = usuario.IdUsuario.ToString();
+			}
+		}
 	}
 }

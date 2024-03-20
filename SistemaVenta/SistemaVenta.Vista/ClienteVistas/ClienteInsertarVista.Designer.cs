@@ -38,16 +38,18 @@
 			textBox3 = new TextBox();
 			button1 = new Button();
 			button2 = new Button();
+			button3 = new Button();
 			SuspendLayout();
 			// 
 			// label1
 			// 
 			label1.AutoSize = true;
-			label1.Location = new Point(184, 41);
+			label1.Location = new Point(256, 52);
 			label1.Name = "label1";
-			label1.Size = new Size(114, 20);
+			label1.Size = new Size(141, 20);
 			label1.TabIndex = 0;
-			label1.Text = "Insertar Clientes";
+			label1.Text = "INSERTAR CLIENTES";
+			label1.Click += label1_Click;
 			// 
 			// label2
 			// 
@@ -107,7 +109,7 @@
 			// 
 			// button1
 			// 
-			button1.Location = new Point(117, 325);
+			button1.Location = new Point(204, 313);
 			button1.Name = "button1";
 			button1.Size = new Size(94, 29);
 			button1.TabIndex = 8;
@@ -117,18 +119,29 @@
 			// 
 			// button2
 			// 
-			button2.Location = new Point(288, 325);
+			button2.Location = new Point(366, 313);
 			button2.Name = "button2";
 			button2.Size = new Size(94, 29);
 			button2.TabIndex = 9;
 			button2.Text = "CANCELAR";
 			button2.UseVisualStyleBackColor = true;
 			// 
+			// button3
+			// 
+			button3.Location = new Point(485, 127);
+			button3.Name = "button3";
+			button3.Size = new Size(118, 29);
+			button3.TabIndex = 10;
+			button3.Text = "SELECCIONAR";
+			button3.UseVisualStyleBackColor = true;
+			button3.Click += button3_Click;
+			// 
 			// ClienteInsertarVista
 			// 
 			AutoScaleDimensions = new SizeF(8F, 20F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(569, 450);
+			ClientSize = new Size(677, 450);
+			Controls.Add(button3);
 			Controls.Add(button2);
 			Controls.Add(button1);
 			Controls.Add(textBox3);
@@ -157,5 +170,6 @@
 		private TextBox textBox3;
 		private Button button1;
 		private Button button2;
+		private Button button3;
 	}
 }
