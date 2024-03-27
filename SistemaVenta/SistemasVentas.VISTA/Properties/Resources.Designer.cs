@@ -63,6 +63,36 @@ namespace SistemasVentas.VISTA.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap alinear_justificar {
+            get {
+                object obj = ResourceManager.GetObject("alinear-justificar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap alinear_justificar1 {
+            get {
+                object obj = ResourceManager.GetObject("alinear-justificar1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap archivo_factura_dolar {
+            get {
+                object obj = ResourceManager.GetObject("archivo-factura-dolar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap candadito {
             get {
                 object obj = ResourceManager.GetObject("candadito", resourceCulture);

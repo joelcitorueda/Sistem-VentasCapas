@@ -32,8 +32,8 @@
 			pictureBox1 = new PictureBox();
 			pictureBox2 = new PictureBox();
 			pictureBox3 = new PictureBox();
-			textBox1 = new TextBox();
-			textBox2 = new TextBox();
+			txtNombreUsuario = new TextBox();
+			txtContraseña = new TextBox();
 			button1 = new Button();
 			label1 = new Label();
 			((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -71,39 +71,41 @@
 			pictureBox3.TabIndex = 2;
 			pictureBox3.TabStop = false;
 			// 
-			// textBox1
+			// txtNombreUsuario
 			// 
-			textBox1.Location = new Point(103, 199);
-			textBox1.Name = "textBox1";
-			textBox1.Size = new Size(278, 27);
-			textBox1.TabIndex = 3;
-			textBox1.Tag = "";
-			textBox1.Text = "USUARIO";
+			txtNombreUsuario.Location = new Point(103, 199);
+			txtNombreUsuario.Name = "txtNombreUsuario";
+			txtNombreUsuario.Size = new Size(278, 27);
+			txtNombreUsuario.TabIndex = 3;
+			txtNombreUsuario.Tag = "";
+			txtNombreUsuario.Text = "USUARIO";
 			// 
-			// textBox2
+			// txtContraseña
 			// 
-			textBox2.Location = new Point(103, 267);
-			textBox2.Name = "textBox2";
-			textBox2.Size = new Size(278, 27);
-			textBox2.TabIndex = 4;
-			textBox2.Text = "PASSWORD";
+			txtContraseña.Location = new Point(103, 267);
+			txtContraseña.Name = "txtContraseña";
+			txtContraseña.Size = new Size(278, 27);
+			txtContraseña.TabIndex = 4;
+			txtContraseña.Text = "PASSWORD";
 			// 
 			// button1
 			// 
+			button1.ForeColor = Color.Black;
 			button1.Location = new Point(190, 325);
 			button1.Name = "button1";
 			button1.Size = new Size(94, 29);
 			button1.TabIndex = 5;
 			button1.Text = "LOGIN";
 			button1.UseVisualStyleBackColor = true;
+			button1.Click += button1_Click;
 			// 
 			// label1
 			// 
 			label1.AutoSize = true;
-			label1.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-			label1.Location = new Point(239, 74);
+			label1.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			label1.Location = new Point(225, 81);
 			label1.Name = "label1";
-			label1.Size = new Size(109, 38);
+			label1.Size = new Size(132, 46);
 			label1.TabIndex = 6;
 			label1.Text = "Sign In";
 			// 
@@ -115,8 +117,8 @@
 			ClientSize = new Size(474, 450);
 			Controls.Add(label1);
 			Controls.Add(button1);
-			Controls.Add(textBox2);
-			Controls.Add(textBox1);
+			Controls.Add(txtContraseña);
+			Controls.Add(txtNombreUsuario);
 			Controls.Add(pictureBox3);
 			Controls.Add(pictureBox2);
 			Controls.Add(pictureBox1);
@@ -134,8 +136,8 @@
 		private PictureBox pictureBox1;
 		private PictureBox pictureBox2;
 		private PictureBox pictureBox3;
-		private TextBox textBox1;
-		private TextBox textBox2;
+		private TextBox txtNombreUsuario;
+		private TextBox txtContraseña;
 		private Button button1;
 		private Label label1;
 	}

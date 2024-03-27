@@ -1,24 +1,24 @@
-﻿namespace SistemasVentas.VISTA.ClienteVistas
+﻿namespace SistemasVentas.VISTA.ClienteVistaVend
 {
-    partial class ClienteListarVista
-    {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
-        private System.ComponentModel.IContainer components = null;
+	partial class ClienteListarVistaVend
+	{
+		/// <summary>
+		/// Required designer variable.
+		/// </summary>
+		private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
-            base.Dispose(disposing);
-        }
+		/// <summary>
+		/// Clean up any resources being used.
+		/// </summary>
+		/// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+		protected override void Dispose(bool disposing)
+		{
+			if (disposing && (components != null))
+			{
+				components.Dispose();
+			}
+			base.Dispose(disposing);
+		}
 
 		#region Windows Form Designer generated code
 
@@ -28,15 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClienteListarVista));
-			dataGridView1 = new DataGridView();
-			button4 = new Button();
-			button3 = new Button();
-			button2 = new Button();
-			button1 = new Button();
-			label1 = new Label();
-			label2 = new Label();
-			button5 = new Button();
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClienteListarVistaVend));
 			pServicios = new Panel();
 			button18 = new Button();
 			button17 = new Button();
@@ -51,95 +43,16 @@
 			button8 = new Button();
 			button7 = new Button();
 			button6 = new Button();
-			((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+			button5 = new Button();
+			label2 = new Label();
+			label1 = new Label();
+			button3 = new Button();
+			button2 = new Button();
+			button1 = new Button();
+			dataGridView1 = new DataGridView();
 			pServicios.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
 			SuspendLayout();
-			// 
-			// dataGridView1
-			// 
-			dataGridView1.AllowUserToAddRows = false;
-			dataGridView1.AllowUserToDeleteRows = false;
-			dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			dataGridView1.Location = new Point(65, 142);
-			dataGridView1.Margin = new Padding(3, 4, 3, 4);
-			dataGridView1.Name = "dataGridView1";
-			dataGridView1.ReadOnly = true;
-			dataGridView1.RowHeadersWidth = 51;
-			dataGridView1.Size = new Size(619, 360);
-			dataGridView1.TabIndex = 1;
-			// 
-			// button4
-			// 
-			button4.Location = new Point(389, 50);
-			button4.Name = "button4";
-			button4.Size = new Size(158, 34);
-			button4.TabIndex = 8;
-			button4.Text = "ELIMINAR";
-			button4.UseVisualStyleBackColor = true;
-			button4.Click += button4_Click;
-			// 
-			// button3
-			// 
-			button3.Location = new Point(205, 50);
-			button3.Name = "button3";
-			button3.Size = new Size(158, 34);
-			button3.TabIndex = 7;
-			button3.Text = "EDITAR";
-			button3.UseVisualStyleBackColor = true;
-			button3.Click += button3_Click;
-			// 
-			// button2
-			// 
-			button2.Location = new Point(25, 50);
-			button2.Name = "button2";
-			button2.Size = new Size(158, 34);
-			button2.TabIndex = 6;
-			button2.Text = "AGREGAR";
-			button2.UseVisualStyleBackColor = true;
-			button2.Click += button2_Click;
-			// 
-			// button1
-			// 
-			button1.DialogResult = DialogResult.OK;
-			button1.Location = new Point(572, 50);
-			button1.Name = "button1";
-			button1.Size = new Size(158, 34);
-			button1.TabIndex = 5;
-			button1.Text = "SELECCIONAR";
-			button1.UseVisualStyleBackColor = true;
-			button1.Click += button1_Click;
-			// 
-			// label1
-			// 
-			label1.AutoSize = true;
-			label1.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-			label1.Location = new Point(65, 110);
-			label1.Name = "label1";
-			label1.Size = new Size(201, 25);
-			label1.TabIndex = 9;
-			label1.Text = "LISTADO DE CLIENTES";
-			// 
-			// label2
-			// 
-			label2.AutoSize = true;
-			label2.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-			label2.Location = new Point(229, 9);
-			label2.Name = "label2";
-			label2.Size = new Size(286, 25);
-			label2.TabIndex = 10;
-			label2.Text = "ADMINISTRACION DE CLIENTES";
-			// 
-			// button5
-			// 
-			button5.Image = (Image)resources.GetObject("button5.Image");
-			button5.ImageAlign = ContentAlignment.MiddleRight;
-			button5.Location = new Point(572, 6);
-			button5.Name = "button5";
-			button5.Size = new Size(158, 35);
-			button5.TabIndex = 11;
-			button5.Text = "DEEPLEGABLE";
-			button5.UseVisualStyleBackColor = true;
-			button5.Click += button5_Click;
 			// 
 			// pServicios
 			// 
@@ -156,10 +69,10 @@
 			pServicios.Controls.Add(button8);
 			pServicios.Controls.Add(button7);
 			pServicios.Controls.Add(button6);
-			pServicios.Location = new Point(572, 41);
+			pServicios.Location = new Point(581, 54);
 			pServicios.Name = "pServicios";
 			pServicios.Size = new Size(158, 517);
-			pServicios.TabIndex = 12;
+			pServicios.TabIndex = 21;
 			pServicios.Visible = false;
 			// 
 			// button18
@@ -292,41 +205,106 @@
 			button6.Text = "Detalle Ing";
 			button6.UseVisualStyleBackColor = true;
 			// 
-			// ClienteListarVista
+			// button5
+			// 
+			button5.Image = (Image)resources.GetObject("button5.Image");
+			button5.ImageAlign = ContentAlignment.MiddleRight;
+			button5.Location = new Point(581, 23);
+			button5.Name = "button5";
+			button5.Size = new Size(158, 35);
+			button5.TabIndex = 20;
+			button5.Text = "DEEPLEGABLE";
+			button5.UseVisualStyleBackColor = true;
+			// 
+			// label2
+			// 
+			label2.AutoSize = true;
+			label2.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			label2.Location = new Point(238, 23);
+			label2.Name = "label2";
+			label2.Size = new Size(286, 25);
+			label2.TabIndex = 19;
+			label2.Text = "ADMINISTRACION DE CLIENTES";
+			// 
+			// label1
+			// 
+			label1.AutoSize = true;
+			label1.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			label1.Location = new Point(74, 124);
+			label1.Name = "label1";
+			label1.Size = new Size(201, 25);
+			label1.TabIndex = 18;
+			label1.Text = "LISTADO DE CLIENTES";
+			// 
+			// button3
+			// 
+			button3.Location = new Point(220, 64);
+			button3.Name = "button3";
+			button3.Size = new Size(158, 34);
+			button3.TabIndex = 16;
+			button3.Text = "EDITAR";
+			button3.UseVisualStyleBackColor = true;
+			// 
+			// button2
+			// 
+			button2.Location = new Point(40, 64);
+			button2.Name = "button2";
+			button2.Size = new Size(158, 34);
+			button2.TabIndex = 15;
+			button2.Text = "AGREGAR";
+			button2.UseVisualStyleBackColor = true;
+			// 
+			// button1
+			// 
+			button1.DialogResult = DialogResult.OK;
+			button1.Location = new Point(402, 64);
+			button1.Name = "button1";
+			button1.Size = new Size(158, 34);
+			button1.TabIndex = 14;
+			button1.Text = "SELECCIONAR";
+			button1.UseVisualStyleBackColor = true;
+			// 
+			// dataGridView1
+			// 
+			dataGridView1.AllowUserToAddRows = false;
+			dataGridView1.AllowUserToDeleteRows = false;
+			dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			dataGridView1.Location = new Point(74, 156);
+			dataGridView1.Margin = new Padding(3, 4, 3, 4);
+			dataGridView1.Name = "dataGridView1";
+			dataGridView1.ReadOnly = true;
+			dataGridView1.RowHeadersWidth = 51;
+			dataGridView1.Size = new Size(619, 360);
+			dataGridView1.TabIndex = 13;
+			// 
+			// ClienteListarVistaVend
 			// 
 			AutoScaleDimensions = new SizeF(8F, 20F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(742, 557);
+			ClientSize = new Size(799, 579);
 			Controls.Add(pServicios);
 			Controls.Add(button5);
 			Controls.Add(label2);
 			Controls.Add(label1);
-			Controls.Add(button4);
 			Controls.Add(button3);
 			Controls.Add(button2);
 			Controls.Add(button1);
 			Controls.Add(dataGridView1);
-			Name = "ClienteListarVista";
-			Text = "ClienteListarVista";
-			Load += ClienteListarVista_Load;
-			((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+			Name = "ClienteListarVistaVend";
+			Text = "ClienteListarVistaVend";
 			pServicios.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
 			ResumeLayout(false);
 			PerformLayout();
 		}
 
 		#endregion
 
-		private DataGridView dataGridView1;
-        private Button button4;
-        private Button button3;
-        private Button button2;
-        private Button button1;
-		private Label label1;
-		private Label label2;
-		private Button button5;
 		private Panel pServicios;
-		private Button button6;
+		private Button button18;
+		private Button button17;
+		private Button button16;
+		private Button button15;
 		private Button button14;
 		private Button button13;
 		private Button button12;
@@ -335,9 +313,13 @@
 		private Button button9;
 		private Button button8;
 		private Button button7;
-		private Button button18;
-		private Button button17;
-		private Button button16;
-		private Button button15;
+		private Button button6;
+		private Button button5;
+		private Label label2;
+		private Label label1;
+		private Button button3;
+		private Button button2;
+		private Button button1;
+		private DataGridView dataGridView1;
 	}
 }

@@ -60,6 +60,27 @@ namespace SistemasVentas.DAL
             da.Fill(dt);
             return dt;
         }
+		public static bool ValidarCredenciales(string NOMBREUSER, string CONTRASEÑA)
+		{
+			// Consulta SQL para verificar si las credenciales son válidas
+			string consulta = "SELECT COUNT(*) FROM USUARIO WHERE NOMBREUSER = @NOMBREUSER AND CONTRASEÑA = @CONTRASEÑA";
 
-    }
+			using (SqlConnection conectar = new SqlConnection(CONECTAR))
+			{
+				using (SqlCommand cmd = new SqlCommand(consulta, conectar))
+				{
+					// Agregar parámetros para evitar inyección SQL
+					cmd.Parameters.AddWithValue("@NOMBREUSER", NOMBREUSER);
+					cmd.Parameters.AddWithValue("@CONTRASEÑA", CONTRASEÑA);
+
+					conectar.Open();
+					int count = (int)cmd.ExecuteScalar();
+
+					// Si count es mayor que cero, significa que las credenciales son válidas
+					return count > 0;
+				}
+			}
+		}
+
+	}
 }
