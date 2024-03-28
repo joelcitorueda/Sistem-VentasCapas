@@ -12,7 +12,11 @@ namespace SistemasVentas.DAL
     {
         public DataTable ListarDetalleIngDal()
         {
-            string consulta = "select * from detalleing";
+            string consulta = "SELECT        DETALLEING.IDDETALLEING, PRODUCTO.NOMBRE PRODUCTO, INGRESO.TOTAL, DETALLEING.FECHAVENC, DETALLEING.CANTIDAD, \n" +
+                "              DETALLEING.PRECIOCOSTO, DETALLEING.PRECIOVENTA, DETALLEING.SUBTOTAL, \n" +
+                "                         DETALLEING.ESTADO\nFROM            DETALLEING INNER JOIN\n" +
+                "                         PRODUCTO ON DETALLEING.IDPRODUCTO = PRODUCTO.IDPRODUCTO INNER JOIN\n" +
+                "                         INGRESO ON DETALLEING.IDINGRESO = INGRESO.IDINGRESO";
             DataTable lista = conexion.EjecutarDataTabla(consulta, "tabla");
             return lista;
         }

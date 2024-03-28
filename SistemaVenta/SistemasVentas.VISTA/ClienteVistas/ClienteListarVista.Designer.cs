@@ -132,12 +132,10 @@
 			// button5
 			// 
 			button5.Image = (Image)resources.GetObject("button5.Image");
-			button5.ImageAlign = ContentAlignment.MiddleRight;
-			button5.Location = new Point(572, 6);
+			button5.Location = new Point(668, -2);
 			button5.Name = "button5";
-			button5.Size = new Size(158, 35);
+			button5.Size = new Size(62, 43);
 			button5.TabIndex = 11;
-			button5.Text = "DEEPLEGABLE";
 			button5.UseVisualStyleBackColor = true;
 			button5.Click += button5_Click;
 			// 
