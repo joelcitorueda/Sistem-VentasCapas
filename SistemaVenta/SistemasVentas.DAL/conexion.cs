@@ -81,6 +81,81 @@ namespace SistemasVentas.DAL
 				}
 			}
 		}
+		public string AutenticarUsuario(string usuario, string contraseña)
+		{
+			string cargo = null;
 
+			using (SqlConnection connection = new SqlConnection(CONECTAR))
+			{
+				string query = "SELECT r.NOMBRE " +
+							   "FROM USUARIO u " +
+							   "INNER JOIN USUARIOROL ur ON u.IDUSUARIO = ur.IDUSUARIO " +
+							   "INNER JOIN ROL r ON ur.IDROL = r.IDROL " +
+							   "WHERE NOMBREUSER = @Usuario AND CONTRASEÑA = @Contraseña";
+
+				SqlCommand command = new SqlCommand(query, connection);
+				command.Parameters.AddWithValue("@Usuario", usuario);
+				command.Parameters.AddWithValue("@Contraseña", contraseña);
+
+				try
+				{
+					connection.Open();
+					SqlDataReader reader = command.ExecuteReader();
+
+					if (reader.Read())
+					{
+						cargo = reader["NOMBRE"].ToString();
+					}
+
+					reader.Close();
+				}
+				catch (Exception ex)
+				{
+					// Manejar excepciones si es necesario
+					Console.WriteLine("Error al autenticar usuario: " + ex.Message);
+				}
+			}
+
+			return cargo;
+		}
+		public string ObtenerDetalleVentaComoTexto()
+		{
+			StringBuilder detalleVenta = new StringBuilder();
+
+			try
+			{
+				using (SqlConnection connection = new SqlConnection(CONECTAR))
+				{
+					string query = "SELECT * FROM DETALLEVENTA";
+
+					SqlCommand command = new SqlCommand(query, connection);
+
+					connection.Open();
+
+					SqlDataReader reader = command.ExecuteReader();
+
+					while (reader.Read())
+					{
+						detalleVenta.AppendLine("ID: " + reader["IDDETALLEVENTA"].ToString());
+						detalleVenta.AppendLine("ID Venta: " + reader["IDVENTA"].ToString());
+						detalleVenta.AppendLine("ID Producto: " + reader["IDPRODUCTO"].ToString());
+						detalleVenta.AppendLine("Cantidad: " + reader["CANTIDAD"].ToString());
+						detalleVenta.AppendLine("Precio Venta: " + reader["PRECIOVENTA"].ToString());
+						detalleVenta.AppendLine("Subtotal: " + reader["SUBTOTAL"].ToString());
+						detalleVenta.AppendLine("------------------------------------------");
+					}
+
+					reader.Close();
+				}
+			}
+			catch (Exception ex)
+			{
+				Console.WriteLine("Error al obtener detalle de venta: " + ex.Message);
+			}
+
+			return detalleVenta.ToString();
+		}
 	}
+
+
 }

@@ -105,6 +105,7 @@
 			Controls.Add(textBox1);
 			Controls.Add(label1);
 			Name = "ClienteEliminarVista";
+			StartPosition = FormStartPosition.CenterScreen;
 			Text = "ClienteEliminarVista";
 			((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
 			ResumeLayout(false);

@@ -306,6 +306,7 @@
 			Controls.Add(dataGridView1);
 			Margin = new Padding(3, 4, 3, 4);
 			Name = "PersonaListarVista";
+			StartPosition = FormStartPosition.CenterScreen;
 			Text = "PersonaListarVista";
 			Load += PersonaListarVista_Load;
 			((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();

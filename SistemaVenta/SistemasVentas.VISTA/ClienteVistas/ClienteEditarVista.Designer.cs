@@ -128,6 +128,7 @@
 			Controls.Add(textBox2);
 			Controls.Add(textBox1);
 			Name = "ClienteEditarVista";
+			StartPosition = FormStartPosition.CenterScreen;
 			Text = "ClienteEditarVista";
 			Load += ClienteEditarVista_Load;
 			((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

@@ -129,6 +129,7 @@
 			Controls.Add(textBox1);
 			Controls.Add(label1);
 			Name = "ClienteInsertarVista";
+			StartPosition = FormStartPosition.CenterScreen;
 			Text = "ClienteInsertarVista";
 			((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
 			ResumeLayout(false);

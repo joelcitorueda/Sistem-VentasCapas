@@ -51,6 +51,9 @@
 			button5 = new Button();
 			label2 = new Label();
 			label1 = new Label();
+			btnGuardarPDF = new Button();
+			btnGuardarExcel = new Button();
+			label3 = new Label();
 			((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
 			pServicios.SuspendLayout();
 			SuspendLayout();
@@ -60,16 +63,18 @@
 			dataGridView1.AllowUserToAddRows = false;
 			dataGridView1.AllowUserToDeleteRows = false;
 			dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			dataGridView1.Location = new Point(63, 161);
+			dataGridView1.Location = new Point(63, 179);
 			dataGridView1.Margin = new Padding(3, 4, 3, 4);
 			dataGridView1.Name = "dataGridView1";
 			dataGridView1.ReadOnly = true;
 			dataGridView1.RowHeadersWidth = 51;
-			dataGridView1.Size = new Size(706, 391);
+			dataGridView1.Size = new Size(706, 373);
 			dataGridView1.TabIndex = 2;
 			// 
 			// button4
 			// 
+			button4.Image = Properties.Resources.icons8_eliminar_27;
+			button4.ImageAlign = ContentAlignment.MiddleRight;
 			button4.Location = new Point(435, 64);
 			button4.Name = "button4";
 			button4.Size = new Size(161, 34);
@@ -80,6 +85,8 @@
 			// 
 			// button3
 			// 
+			button3.Image = Properties.Resources.icons8_editar_27;
+			button3.ImageAlign = ContentAlignment.MiddleRight;
 			button3.Location = new Point(231, 64);
 			button3.Name = "button3";
 			button3.Size = new Size(161, 34);
@@ -90,6 +97,8 @@
 			// 
 			// button2
 			// 
+			button2.Image = (Image)resources.GetObject("button2.Image");
+			button2.ImageAlign = ContentAlignment.MiddleRight;
 			button2.Location = new Point(24, 64);
 			button2.Name = "button2";
 			button2.Size = new Size(161, 34);
@@ -101,6 +110,8 @@
 			// button1
 			// 
 			button1.DialogResult = DialogResult.OK;
+			button1.Image = Properties.Resources.icons8_marque_todas_las_27;
+			button1.ImageAlign = ContentAlignment.MiddleRight;
 			button1.Location = new Point(637, 64);
 			button1.Name = "button1";
 			button1.Size = new Size(161, 34);
@@ -262,6 +273,7 @@
 			// 
 			// button5
 			// 
+			button5.ForeColor = Color.SlateBlue;
 			button5.Image = (Image)resources.GetObject("button5.Image");
 			button5.Location = new Point(766, 12);
 			button5.Name = "button5";
@@ -272,37 +284,77 @@
 			// label2
 			// 
 			label2.AutoSize = true;
-			label2.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-			label2.Location = new Point(233, 19);
+			label2.BackColor = Color.SlateBlue;
+			label2.Font = new Font("Segoe UI Black", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			label2.ForeColor = Color.White;
+			label2.Location = new Point(174, 12);
 			label2.Name = "label2";
-			label2.Size = new Size(363, 25);
+			label2.Size = new Size(479, 31);
 			label2.TabIndex = 19;
 			label2.Text = "ADMINISTRACION DE DETALLES VENTAS";
 			// 
 			// label1
 			// 
 			label1.AutoSize = true;
-			label1.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-			label1.Location = new Point(24, 117);
+			label1.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			label1.ForeColor = Color.Black;
+			label1.Location = new Point(24, 129);
 			label1.Name = "label1";
-			label1.Size = new Size(278, 25);
+			label1.Size = new Size(321, 28);
 			label1.TabIndex = 20;
 			label1.Text = "LISTADO DE DETALLES VENTAS";
+			// 
+			// btnGuardarPDF
+			// 
+			btnGuardarPDF.Image = Properties.Resources.icons8_pdf_27;
+			btnGuardarPDF.ImageAlign = ContentAlignment.MiddleRight;
+			btnGuardarPDF.Location = new Point(155, 575);
+			btnGuardarPDF.Name = "btnGuardarPDF";
+			btnGuardarPDF.Size = new Size(173, 34);
+			btnGuardarPDF.TabIndex = 21;
+			btnGuardarPDF.Text = "GENERAR PDF";
+			btnGuardarPDF.UseVisualStyleBackColor = true;
+			btnGuardarPDF.Click += btnGuardarPDF_Click;
+			// 
+			// btnGuardarExcel
+			// 
+			btnGuardarExcel.Image = Properties.Resources.icons8_ms_excel_27;
+			btnGuardarExcel.ImageAlign = ContentAlignment.MiddleRight;
+			btnGuardarExcel.Location = new Point(373, 575);
+			btnGuardarExcel.Name = "btnGuardarExcel";
+			btnGuardarExcel.Size = new Size(173, 34);
+			btnGuardarExcel.TabIndex = 22;
+			btnGuardarExcel.Text = "GENERAR EXCEL";
+			btnGuardarExcel.UseVisualStyleBackColor = true;
+			btnGuardarExcel.Click += btnGuardarExcel_Click;
+			// 
+			// label3
+			// 
+			label3.BackColor = Color.SlateBlue;
+			label3.Location = new Point(0, -8);
+			label3.Name = "label3";
+			label3.Size = new Size(841, 125);
+			label3.TabIndex = 23;
 			// 
 			// DetalleVentaListarVista
 			// 
 			AutoScaleDimensions = new SizeF(8F, 20F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(840, 582);
-			Controls.Add(label1);
-			Controls.Add(label2);
-			Controls.Add(button5);
+			BackColor = Color.White;
+			ClientSize = new Size(840, 657);
 			Controls.Add(pServicios);
+			Controls.Add(button1);
 			Controls.Add(button4);
 			Controls.Add(button3);
 			Controls.Add(button2);
-			Controls.Add(button1);
+			Controls.Add(button5);
+			Controls.Add(label2);
+			Controls.Add(label3);
+			Controls.Add(btnGuardarExcel);
+			Controls.Add(btnGuardarPDF);
+			Controls.Add(label1);
 			Controls.Add(dataGridView1);
+			ForeColor = Color.Black;
 			Name = "DetalleVentaListarVista";
 			Text = "DetalleVentaListarVista";
 			Load += DetalleVentaListarVista_Load;
@@ -336,5 +388,8 @@
 		private Button button5;
 		private Label label2;
 		private Label label1;
+		private Button btnGuardarPDF;
+		private Button btnGuardarExcel;
+		private Label label3;
 	}
 }
