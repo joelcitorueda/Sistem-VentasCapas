@@ -60,16 +60,18 @@
 			dataGridView1.AllowUserToAddRows = false;
 			dataGridView1.AllowUserToDeleteRows = false;
 			dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			dataGridView1.Location = new Point(80, 145);
+			dataGridView1.Location = new Point(80, 157);
 			dataGridView1.Margin = new Padding(3, 4, 3, 4);
 			dataGridView1.Name = "dataGridView1";
 			dataGridView1.ReadOnly = true;
 			dataGridView1.RowHeadersWidth = 51;
-			dataGridView1.Size = new Size(632, 391);
+			dataGridView1.Size = new Size(618, 419);
 			dataGridView1.TabIndex = 2;
 			// 
 			// button4
 			// 
+			button4.Image = Properties.Resources.icons8_eliminar_27;
+			button4.ImageAlign = ContentAlignment.MiddleRight;
 			button4.Location = new Point(419, 61);
 			button4.Name = "button4";
 			button4.Size = new Size(147, 34);
@@ -80,6 +82,8 @@
 			// 
 			// button3
 			// 
+			button3.Image = Properties.Resources.icons8_editar_27;
+			button3.ImageAlign = ContentAlignment.MiddleRight;
 			button3.Location = new Point(231, 61);
 			button3.Name = "button3";
 			button3.Size = new Size(147, 34);
@@ -90,6 +94,8 @@
 			// 
 			// button2
 			// 
+			button2.Image = Properties.Resources.icons8_agregar_usuario_masculino_30;
+			button2.ImageAlign = ContentAlignment.MiddleRight;
 			button2.Location = new Point(29, 61);
 			button2.Name = "button2";
 			button2.Size = new Size(147, 34);
@@ -101,9 +107,11 @@
 			// button1
 			// 
 			button1.DialogResult = DialogResult.OK;
+			button1.Image = Properties.Resources.icons8_marque_todas_las_27;
+			button1.ImageAlign = ContentAlignment.MiddleRight;
 			button1.Location = new Point(607, 61);
 			button1.Name = "button1";
-			button1.Size = new Size(147, 34);
+			button1.Size = new Size(162, 34);
 			button1.TabIndex = 9;
 			button1.Text = "SELECCIONAR";
 			button1.UseVisualStyleBackColor = true;
@@ -123,7 +131,7 @@
 			// 
 			label1.AutoSize = true;
 			label1.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-			label1.Location = new Point(29, 107);
+			label1.Location = new Point(29, 114);
 			label1.Name = "label1";
 			label1.Size = new Size(245, 25);
 			label1.TabIndex = 14;
@@ -132,7 +140,7 @@
 			// button5
 			// 
 			button5.Image = (Image)resources.GetObject("button5.Image");
-			button5.Location = new Point(740, 13);
+			button5.Location = new Point(707, 12);
 			button5.Name = "button5";
 			button5.Size = new Size(62, 43);
 			button5.TabIndex = 15;
@@ -140,6 +148,7 @@
 			// 
 			// pServicios
 			// 
+			pServicios.BackColor = Color.SlateBlue;
 			pServicios.Controls.Add(button18);
 			pServicios.Controls.Add(button17);
 			pServicios.Controls.Add(button16);
@@ -153,16 +162,17 @@
 			pServicios.Controls.Add(button8);
 			pServicios.Controls.Add(button7);
 			pServicios.Controls.Add(button6);
-			pServicios.Location = new Point(644, 51);
+			pServicios.Location = new Point(611, 52);
 			pServicios.Name = "pServicios";
-			pServicios.Size = new Size(158, 517);
+			pServicios.Size = new Size(158, 548);
 			pServicios.TabIndex = 16;
 			pServicios.Visible = false;
 			// 
 			// button18
 			// 
 			button18.FlatAppearance.MouseOverBackColor = Color.Lime;
-			button18.Location = new Point(0, 458);
+			button18.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			button18.Location = new Point(0, 495);
 			button18.Name = "button18";
 			button18.Size = new Size(158, 43);
 			button18.TabIndex = 19;
@@ -172,7 +182,8 @@
 			// button17
 			// 
 			button17.FlatAppearance.MouseOverBackColor = Color.Lime;
-			button17.Location = new Point(0, 418);
+			button17.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			button17.Location = new Point(0, 455);
 			button17.Name = "button17";
 			button17.Size = new Size(158, 43);
 			button17.TabIndex = 18;
@@ -182,7 +193,8 @@
 			// button16
 			// 
 			button16.FlatAppearance.MouseOverBackColor = Color.Lime;
-			button16.Location = new Point(0, 379);
+			button16.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			button16.Location = new Point(0, 415);
 			button16.Name = "button16";
 			button16.Size = new Size(158, 43);
 			button16.TabIndex = 17;
@@ -192,7 +204,8 @@
 			// button15
 			// 
 			button15.FlatAppearance.MouseOverBackColor = Color.Lime;
-			button15.Location = new Point(0, 339);
+			button15.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			button15.Location = new Point(0, 375);
 			button15.Name = "button15";
 			button15.Size = new Size(158, 43);
 			button15.TabIndex = 16;
@@ -202,7 +215,8 @@
 			// button14
 			// 
 			button14.FlatAppearance.MouseOverBackColor = Color.Lime;
-			button14.Location = new Point(0, 302);
+			button14.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			button14.Location = new Point(0, 335);
 			button14.Name = "button14";
 			button14.Size = new Size(158, 43);
 			button14.TabIndex = 15;
@@ -212,7 +226,8 @@
 			// button13
 			// 
 			button13.FlatAppearance.MouseOverBackColor = Color.Lime;
-			button13.Location = new Point(0, 263);
+			button13.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			button13.Location = new Point(0, 295);
 			button13.Name = "button13";
 			button13.Size = new Size(158, 43);
 			button13.TabIndex = 14;
@@ -222,7 +237,8 @@
 			// button12
 			// 
 			button12.FlatAppearance.MouseOverBackColor = Color.Lime;
-			button12.Location = new Point(0, 227);
+			button12.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			button12.Location = new Point(0, 255);
 			button12.Name = "button12";
 			button12.Size = new Size(158, 43);
 			button12.TabIndex = 13;
@@ -232,7 +248,8 @@
 			// button11
 			// 
 			button11.FlatAppearance.MouseOverBackColor = Color.Lime;
-			button11.Location = new Point(0, 188);
+			button11.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			button11.Location = new Point(0, 216);
 			button11.Name = "button11";
 			button11.Size = new Size(158, 43);
 			button11.TabIndex = 12;
@@ -242,7 +259,8 @@
 			// button10
 			// 
 			button10.FlatAppearance.MouseOverBackColor = Color.Lime;
-			button10.Location = new Point(0, 152);
+			button10.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			button10.Location = new Point(0, 177);
 			button10.Name = "button10";
 			button10.Size = new Size(158, 43);
 			button10.TabIndex = 11;
@@ -252,7 +270,8 @@
 			// button9
 			// 
 			button9.FlatAppearance.MouseOverBackColor = Color.Lime;
-			button9.Location = new Point(0, 114);
+			button9.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			button9.Location = new Point(0, 138);
 			button9.Name = "button9";
 			button9.Size = new Size(158, 43);
 			button9.TabIndex = 10;
@@ -262,7 +281,8 @@
 			// button8
 			// 
 			button8.FlatAppearance.MouseOverBackColor = Color.Lime;
-			button8.Location = new Point(0, 78);
+			button8.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			button8.Location = new Point(0, 97);
 			button8.Name = "button8";
 			button8.Size = new Size(158, 43);
 			button8.TabIndex = 9;
@@ -272,7 +292,8 @@
 			// button7
 			// 
 			button7.FlatAppearance.MouseOverBackColor = Color.Lime;
-			button7.Location = new Point(0, 39);
+			button7.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			button7.Location = new Point(0, 55);
 			button7.Name = "button7";
 			button7.Size = new Size(158, 43);
 			button7.TabIndex = 8;
@@ -282,7 +303,8 @@
 			// button6
 			// 
 			button6.FlatAppearance.MouseOverBackColor = Color.Lime;
-			button6.Location = new Point(0, 0);
+			button6.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			button6.Location = new Point(0, 15);
 			button6.Name = "button6";
 			button6.Size = new Size(158, 43);
 			button6.TabIndex = 7;
@@ -293,7 +315,7 @@
 			// 
 			AutoScaleDimensions = new SizeF(8F, 20F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(814, 563);
+			ClientSize = new Size(785, 612);
 			Controls.Add(pServicios);
 			Controls.Add(button5);
 			Controls.Add(label1);

@@ -113,6 +113,16 @@ namespace SistemasVentas.VISTA.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_agregar_usuario_masculino_30 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-agregar-usuario-masculino-30", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_agregar_usuario_masculino_64 {
             get {
                 object obj = ResourceManager.GetObject("icons8-agregar-usuario-masculino-64", resourceCulture);
