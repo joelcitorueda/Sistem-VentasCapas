@@ -34,6 +34,16 @@ namespace SistemasVentas.VISTA.LoginIniciarSecion
 
 			if (cargo != null)
 			{
+				// Obtener el nombre del usuario
+				string nombreUsuario = ObtenerNombreUsuario(usuario); // Suponiendo que tienes una función para obtener el nombre del usuario
+
+				// Mostrar mensaje de bienvenida
+				string mensajeBienvenida = $"¡Bienvenido, {cargo}";
+
+				// Mostrar rol del usuario
+				mensajeBienvenida += $" {nombreUsuario}.";
+
+				MessageBox.Show(mensajeBienvenida);
 				// Dependiendo del cargo del usuario, redirigir a la ventana correspondiente
 				if (cargo == "Gerente" || cargo == "Administrador")
 				{
@@ -66,9 +76,15 @@ namespace SistemasVentas.VISTA.LoginIniciarSecion
 			return conexion.ValidarCredenciales(nombreUsuario, contrasena);
 
 		}
-		
+		private string ObtenerNombreUsuario(string nombreUsuario)
+		{
+			conexion conexion = new conexion();
+			return nombreUsuario;
+		}
+
+
 
 	}
-		
-	
+
+
 }
