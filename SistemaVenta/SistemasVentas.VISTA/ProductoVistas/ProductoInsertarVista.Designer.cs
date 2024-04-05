@@ -28,7 +28,6 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductoInsertarVista));
 			textBox3 = new TextBox();
 			textBox2 = new TextBox();
 			textBox1 = new TextBox();
@@ -47,7 +46,8 @@
 			// 
 			// textBox3
 			// 
-			textBox3.Location = new Point(81, 248);
+			textBox3.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+			textBox3.Location = new Point(75, 303);
 			textBox3.Name = "textBox3";
 			textBox3.Size = new Size(313, 27);
 			textBox3.TabIndex = 31;
@@ -55,7 +55,8 @@
 			// 
 			// textBox2
 			// 
-			textBox2.Location = new Point(81, 215);
+			textBox2.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+			textBox2.Location = new Point(75, 254);
 			textBox2.Name = "textBox2";
 			textBox2.Size = new Size(155, 27);
 			textBox2.TabIndex = 30;
@@ -63,7 +64,8 @@
 			// 
 			// textBox1
 			// 
-			textBox1.Location = new Point(81, 180);
+			textBox1.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+			textBox1.Location = new Point(75, 204);
 			textBox1.Name = "textBox1";
 			textBox1.Size = new Size(155, 27);
 			textBox1.TabIndex = 29;
@@ -72,7 +74,8 @@
 			// button2
 			// 
 			button2.DialogResult = DialogResult.Cancel;
-			button2.Location = new Point(273, 445);
+			button2.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+			button2.Location = new Point(245, 558);
 			button2.Name = "button2";
 			button2.Size = new Size(94, 29);
 			button2.TabIndex = 24;
@@ -82,7 +85,8 @@
 			// button1
 			// 
 			button1.DialogResult = DialogResult.OK;
-			button1.Location = new Point(142, 445);
+			button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+			button1.Location = new Point(113, 558);
 			button1.Name = "button1";
 			button1.Size = new Size(94, 29);
 			button1.TabIndex = 23;
@@ -92,7 +96,8 @@
 			// 
 			// textBox4
 			// 
-			textBox4.Location = new Point(81, 285);
+			textBox4.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+			textBox4.Location = new Point(75, 357);
 			textBox4.Name = "textBox4";
 			textBox4.Size = new Size(313, 27);
 			textBox4.TabIndex = 38;
@@ -100,7 +105,8 @@
 			// 
 			// textBox5
 			// 
-			textBox5.Location = new Point(81, 321);
+			textBox5.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+			textBox5.Location = new Point(75, 414);
 			textBox5.Name = "textBox5";
 			textBox5.Size = new Size(313, 27);
 			textBox5.TabIndex = 37;
@@ -108,7 +114,8 @@
 			// 
 			// textBox6
 			// 
-			textBox6.Location = new Point(81, 357);
+			textBox6.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+			textBox6.Location = new Point(75, 463);
 			textBox6.Name = "textBox6";
 			textBox6.Size = new Size(313, 27);
 			textBox6.TabIndex = 36;
@@ -116,7 +123,8 @@
 			// 
 			// textBox7
 			// 
-			textBox7.Location = new Point(81, 390);
+			textBox7.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+			textBox7.Location = new Point(75, 513);
 			textBox7.Name = "textBox7";
 			textBox7.Size = new Size(313, 27);
 			textBox7.TabIndex = 39;
@@ -124,7 +132,8 @@
 			// 
 			// button3
 			// 
-			button3.Location = new Point(251, 180);
+			button3.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+			button3.Location = new Point(245, 203);
 			button3.Name = "button3";
 			button3.Size = new Size(143, 29);
 			button3.TabIndex = 40;
@@ -134,7 +143,8 @@
 			// 
 			// button4
 			// 
-			button4.Location = new Point(251, 213);
+			button4.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+			button4.Location = new Point(245, 252);
 			button4.Name = "button4";
 			button4.Size = new Size(143, 29);
 			button4.TabIndex = 41;
@@ -144,10 +154,10 @@
 			// 
 			// pictureBox1
 			// 
-			pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-			pictureBox1.Location = new Point(176, 26);
+			pictureBox1.Image = Properties.Resources.icons8_producto_50;
+			pictureBox1.Location = new Point(150, 51);
 			pictureBox1.Name = "pictureBox1";
-			pictureBox1.Size = new Size(117, 114);
+			pictureBox1.Size = new Size(138, 134);
 			pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
 			pictureBox1.TabIndex = 52;
 			pictureBox1.TabStop = false;
@@ -155,10 +165,11 @@
 			// label8
 			// 
 			label8.AutoSize = true;
-			label8.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-			label8.Location = new Point(25, 143);
+			label8.Font = new Font("Arial Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			label8.ForeColor = Color.White;
+			label8.Location = new Point(85, 9);
 			label8.Name = "label8";
-			label8.Size = new Size(211, 25);
+			label8.Size = new Size(271, 28);
 			label8.TabIndex = 51;
 			label8.Text = "AGREGAR PRODUCTOS";
 			// 
@@ -166,7 +177,8 @@
 			// 
 			AutoScaleDimensions = new SizeF(8F, 20F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(457, 523);
+			BackColor = Color.DarkSlateBlue;
+			ClientSize = new Size(457, 625);
 			Controls.Add(pictureBox1);
 			Controls.Add(label8);
 			Controls.Add(button4);
@@ -181,6 +193,7 @@
 			Controls.Add(button2);
 			Controls.Add(button1);
 			Name = "ProductoInsertarVista";
+			StartPosition = FormStartPosition.CenterScreen;
 			Text = "ProductoInsertarVista";
 			((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
 			ResumeLayout(false);

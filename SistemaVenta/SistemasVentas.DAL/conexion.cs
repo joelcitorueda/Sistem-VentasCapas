@@ -62,21 +62,17 @@ namespace SistemasVentas.DAL
         }
 		public static bool ValidarCredenciales(string NOMBREUSER, string CONTRASEÑA)
 		{
-			// Consulta SQL para verificar si las credenciales son válidas
 			string consulta = "SELECT COUNT(*) FROM USUARIO WHERE NOMBREUSER = @NOMBREUSER AND CONTRASEÑA = @CONTRASEÑA";
 
 			using (SqlConnection conectar = new SqlConnection(CONECTAR))
 			{
 				using (SqlCommand cmd = new SqlCommand(consulta, conectar))
 				{
-					// Agregar parámetros para evitar inyección SQL
 					cmd.Parameters.AddWithValue("@NOMBREUSER", NOMBREUSER);
 					cmd.Parameters.AddWithValue("@CONTRASEÑA", CONTRASEÑA);
 
 					conectar.Open();
 					int count = (int)cmd.ExecuteScalar();
-
-					// Si count es mayor que cero, significa que las credenciales son válidas
 					return count > 0;
 				}
 			}
@@ -111,7 +107,6 @@ namespace SistemasVentas.DAL
 				}
 				catch (Exception ex)
 				{
-					// Manejar excepciones si es necesario
 					Console.WriteLine("Error al autenticar usuario: " + ex.Message);
 				}
 			}
@@ -154,6 +149,22 @@ namespace SistemasVentas.DAL
 			}
 
 			return detalleVenta.ToString();
+		}
+		public DataTable EjecutarConsulta(string consulta, string nombreParametro, object valorParametro)
+		{
+			DataTable dataTable = new DataTable();
+
+			using (SqlConnection conexion = new SqlConnection(CONECTAR))
+			{
+				SqlCommand comando = new SqlCommand(consulta, conexion);
+				comando.Parameters.AddWithValue(nombreParametro, valorParametro);
+
+				conexion.Open();
+				SqlDataReader reader = comando.ExecuteReader();
+				dataTable.Load(reader);
+			}
+
+			return dataTable;
 		}
 	}
 

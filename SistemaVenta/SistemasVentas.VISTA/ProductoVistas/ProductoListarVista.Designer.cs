@@ -29,7 +29,9 @@
 		private void InitializeComponent()
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductoListarVista));
-			dataGridView1 = new DataGridView();
+			DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
+			DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
+			DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
 			button4 = new Button();
 			button3 = new Button();
 			button2 = new Button();
@@ -51,25 +53,15 @@
 			button7 = new Button();
 			button6 = new Button();
 			button19 = new Button();
-			((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+			dataGridView1 = new DataGridView();
+			button5 = new Button();
 			pServicios.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
 			SuspendLayout();
-			// 
-			// dataGridView1
-			// 
-			dataGridView1.AllowUserToAddRows = false;
-			dataGridView1.AllowUserToDeleteRows = false;
-			dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			dataGridView1.Location = new Point(75, 184);
-			dataGridView1.Margin = new Padding(3, 4, 3, 4);
-			dataGridView1.Name = "dataGridView1";
-			dataGridView1.ReadOnly = true;
-			dataGridView1.RowHeadersWidth = 51;
-			dataGridView1.Size = new Size(639, 379);
-			dataGridView1.TabIndex = 2;
 			// 
 			// button4
 			// 
+			button4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
 			button4.Image = Properties.Resources.icons8_eliminar_27;
 			button4.ImageAlign = ContentAlignment.MiddleRight;
 			button4.Location = new Point(412, 77);
@@ -82,6 +74,7 @@
 			// 
 			// button3
 			// 
+			button3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
 			button3.Image = Properties.Resources.icons8_editar_27;
 			button3.ImageAlign = ContentAlignment.MiddleRight;
 			button3.Location = new Point(217, 77);
@@ -94,6 +87,7 @@
 			// 
 			// button2
 			// 
+			button2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
 			button2.Image = Properties.Resources.icons8_agregar_usuario_masculino_30;
 			button2.ImageAlign = ContentAlignment.MiddleRight;
 			button2.Location = new Point(32, 77);
@@ -107,6 +101,7 @@
 			// button1
 			// 
 			button1.DialogResult = DialogResult.OK;
+			button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
 			button1.Image = Properties.Resources.icons8_marque_todas_las_27;
 			button1.ImageAlign = ContentAlignment.MiddleRight;
 			button1.Location = new Point(595, 77);
@@ -120,26 +115,29 @@
 			// label2
 			// 
 			label2.AutoSize = true;
-			label2.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-			label2.Location = new Point(250, 23);
+			label2.BackColor = Color.DarkSlateBlue;
+			label2.Font = new Font("Arial Black", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			label2.ForeColor = Color.White;
+			label2.Location = new Point(254, 22);
 			label2.Name = "label2";
-			label2.Size = new Size(313, 25);
+			label2.Size = new Size(548, 40);
 			label2.TabIndex = 11;
 			label2.Text = "ADMINISTRACION DE PRODUCTOS";
 			// 
 			// label1
 			// 
 			label1.AutoSize = true;
-			label1.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-			label1.Location = new Point(32, 139);
+			label1.Font = new Font("Arial Black", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			label1.ForeColor = Color.White;
+			label1.Location = new Point(32, 142);
 			label1.Name = "label1";
-			label1.Size = new Size(228, 25);
+			label1.Size = new Size(337, 32);
 			label1.TabIndex = 12;
 			label1.Text = "LISTADO DE PRODUCTOS\r\n";
 			// 
 			// pServicios
 			// 
-			pServicios.BackColor = Color.SlateBlue;
+			pServicios.BackColor = Color.DarkSlateBlue;
 			pServicios.Controls.Add(button18);
 			pServicios.Controls.Add(button17);
 			pServicios.Controls.Add(button16);
@@ -153,7 +151,7 @@
 			pServicios.Controls.Add(button8);
 			pServicios.Controls.Add(button7);
 			pServicios.Controls.Add(button6);
-			pServicios.Location = new Point(597, 51);
+			pServicios.Location = new Point(934, 60);
 			pServicios.Name = "pServicios";
 			pServicios.Size = new Size(158, 548);
 			pServicios.TabIndex = 14;
@@ -318,18 +316,76 @@
 			// button19
 			// 
 			button19.Image = (Image)resources.GetObject("button19.Image");
-			button19.Location = new Point(693, 12);
+			button19.Location = new Point(1030, 11);
 			button19.Name = "button19";
-			button19.Size = new Size(62, 43);
+			button19.Size = new Size(62, 51);
 			button19.TabIndex = 21;
 			button19.UseVisualStyleBackColor = true;
 			button19.Click += button19_Click;
+			// 
+			// dataGridView1
+			// 
+			dataGridView1.AllowUserToAddRows = false;
+			dataGridView1.AllowUserToDeleteRows = false;
+			dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+			dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+			dataGridView1.BackgroundColor = Color.DarkSlateBlue;
+			dataGridView1.BorderStyle = BorderStyle.None;
+			dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+			dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleCenter;
+			dataGridViewCellStyle7.BackColor = Color.SlateBlue;
+			dataGridViewCellStyle7.Font = new Font("Arial", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			dataGridViewCellStyle7.ForeColor = Color.White;
+			dataGridViewCellStyle7.SelectionBackColor = SystemColors.Highlight;
+			dataGridViewCellStyle7.SelectionForeColor = SystemColors.HighlightText;
+			dataGridViewCellStyle7.WrapMode = DataGridViewTriState.True;
+			dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+			dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			dataGridView1.EnableHeadersVisualStyles = false;
+			dataGridView1.GridColor = Color.SteelBlue;
+			dataGridView1.Location = new Point(74, 204);
+			dataGridView1.Margin = new Padding(3, 4, 3, 4);
+			dataGridView1.Name = "dataGridView1";
+			dataGridView1.ReadOnly = true;
+			dataGridView1.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+			dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle8.BackColor = Color.SlateBlue;
+			dataGridViewCellStyle8.Font = new Font("Arial", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			dataGridViewCellStyle8.ForeColor = Color.White;
+			dataGridViewCellStyle8.SelectionBackColor = Color.SteelBlue;
+			dataGridViewCellStyle8.SelectionForeColor = SystemColors.HighlightText;
+			dataGridViewCellStyle8.WrapMode = DataGridViewTriState.True;
+			dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+			dataGridView1.RowHeadersWidth = 51;
+			dataGridViewCellStyle9.BackColor = Color.DarkSlateBlue;
+			dataGridViewCellStyle9.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+			dataGridViewCellStyle9.ForeColor = Color.White;
+			dataGridViewCellStyle9.SelectionBackColor = Color.SlateBlue;
+			dataGridViewCellStyle9.SelectionForeColor = Color.White;
+			dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle9;
+			dataGridView1.Size = new Size(984, 389);
+			dataGridView1.TabIndex = 27;
+			// 
+			// button5
+			// 
+			button5.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			button5.Image = Properties.Resources.icons8_cerrar_sesión_27;
+			button5.ImageAlign = ContentAlignment.MiddleRight;
+			button5.Location = new Point(12, 11);
+			button5.Name = "button5";
+			button5.Size = new Size(124, 34);
+			button5.TabIndex = 28;
+			button5.Text = "Log Out";
+			button5.UseVisualStyleBackColor = true;
+			button5.Click += button5_Click_1;
 			// 
 			// ProductoListarVista
 			// 
 			AutoScaleDimensions = new SizeF(8F, 20F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(783, 621);
+			BackColor = Color.DarkSlateBlue;
+			ClientSize = new Size(1104, 621);
+			Controls.Add(button5);
 			Controls.Add(button19);
 			Controls.Add(pServicios);
 			Controls.Add(label1);
@@ -340,18 +396,17 @@
 			Controls.Add(button1);
 			Controls.Add(dataGridView1);
 			Name = "ProductoListarVista";
+			StartPosition = FormStartPosition.CenterScreen;
 			Text = "ProductoListarVista";
 			Load += ProductoListarVista_Load;
-			((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
 			pServicios.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
 			ResumeLayout(false);
 			PerformLayout();
 		}
 
 		#endregion
-
-		private DataGridView dataGridView1;
-        private Button button4;
+		private Button button4;
         private Button button3;
         private Button button2;
         private Button button1;
@@ -372,5 +427,7 @@
 		private Button button7;
 		private Button button6;
 		private Button button19;
+		private DataGridView dataGridView1;
+		private Button button5;
 	}
 }

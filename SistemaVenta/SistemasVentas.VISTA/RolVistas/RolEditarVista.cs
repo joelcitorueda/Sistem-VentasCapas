@@ -12,31 +12,40 @@ using System.Windows.Forms;
 
 namespace SistemasVentas.VISTA.RolVistas
 {
-    public partial class RolEditarVista : Form
-    {
-        int idx = 0;
-        Rol p = new Rol();
-        RolBss bss = new RolBss();
-        public RolEditarVista(int id)
-        {
-            idx = id;
-            InitializeComponent();
-        }
+	public partial class RolEditarVista : Form
+	{
+		int idx = 0;
+		Rol p = new Rol();
+		RolBss bss = new RolBss();
+		public RolEditarVista(int id)
+		{
+			idx = id;
+			InitializeComponent();
+		}
 
-        private void RolEditarVista_Load(object sender, EventArgs e)
-        {
-            p = bss.ObtenerRolIdBss(idx);
-            textBox1.Text = p.Nombre;
-            textBox2.Text = p.Estado;
-        }
+		private void RolEditarVista_Load(object sender, EventArgs e)
+		{
+			p = bss.ObtenerRolIdBss(idx);
+			textBox1.Text = p.Nombre;
+			textBox2.Text = p.Estado;
+		}
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            p.Nombre = textBox1.Text;
-            p.Estado = textBox2.Text;
+		private void button1_Click(object sender, EventArgs e)
+		{
+			p.Nombre = textBox1.Text;
+			p.Estado = textBox2.Text;
 
-            bss.EditarRolBss(p);
-            MessageBox.Show("Datos Actualizados");
-        }
-    }
+			bss.EditarRolBss(p);
+			MessageBox.Show("Datos Actualizados");
+		}
+
+		private void button1_Click_1(object sender, EventArgs e)
+		{
+			p.Nombre = textBox1.Text;
+			p.Estado = textBox2.Text;
+
+			bss.EditarRolBss(p);
+			MessageBox.Show("Datos Actualizados");
+		}
+	}
 }

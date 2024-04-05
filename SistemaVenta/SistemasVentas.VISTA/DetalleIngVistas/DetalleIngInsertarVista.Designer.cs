@@ -46,12 +46,16 @@
 			textBox7 = new TextBox();
 			button4 = new Button();
 			button3 = new Button();
+			pictureBox1 = new PictureBox();
+			label8 = new Label();
+			((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
 			SuspendLayout();
 			// 
 			// button2
 			// 
 			button2.DialogResult = DialogResult.Cancel;
-			button2.Location = new Point(367, 318);
+			button2.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+			button2.Location = new Point(264, 634);
 			button2.Name = "button2";
 			button2.Size = new Size(94, 29);
 			button2.TabIndex = 23;
@@ -61,7 +65,8 @@
 			// button1
 			// 
 			button1.DialogResult = DialogResult.OK;
-			button1.Location = new Point(245, 318);
+			button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+			button1.Location = new Point(128, 634);
 			button1.Name = "button1";
 			button1.Size = new Size(94, 29);
 			button1.TabIndex = 22;
@@ -71,28 +76,32 @@
 			// 
 			// textBox5
 			// 
-			textBox5.Location = new Point(178, 196);
+			textBox5.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+			textBox5.Location = new Point(82, 458);
 			textBox5.Name = "textBox5";
 			textBox5.Size = new Size(334, 27);
 			textBox5.TabIndex = 21;
 			// 
 			// textBox4
 			// 
-			textBox4.Location = new Point(178, 161);
+			textBox4.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+			textBox4.Location = new Point(82, 392);
 			textBox4.Name = "textBox4";
 			textBox4.Size = new Size(334, 27);
 			textBox4.TabIndex = 20;
 			// 
 			// textBox2
 			// 
-			textBox2.Location = new Point(178, 79);
+			textBox2.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+			textBox2.Location = new Point(82, 265);
 			textBox2.Name = "textBox2";
 			textBox2.Size = new Size(192, 27);
 			textBox2.TabIndex = 18;
 			// 
 			// textBox1
 			// 
-			textBox1.Location = new Point(178, 40);
+			textBox1.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+			textBox1.Location = new Point(82, 201);
 			textBox1.Name = "textBox1";
 			textBox1.Size = new Size(192, 27);
 			textBox1.TabIndex = 17;
@@ -100,27 +109,33 @@
 			// label5
 			// 
 			label5.AutoSize = true;
-			label5.Location = new Point(96, 265);
+			label5.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+			label5.ForeColor = Color.White;
+			label5.Location = new Point(41, 563);
 			label5.Name = "label5";
-			label5.Size = new Size(76, 20);
+			label5.Size = new Size(83, 20);
 			label5.TabIndex = 16;
 			label5.Text = "SUBTOTAL";
 			// 
 			// label4
 			// 
 			label4.AutoSize = true;
-			label4.Location = new Point(65, 227);
+			label4.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+			label4.ForeColor = Color.White;
+			label4.Location = new Point(41, 499);
 			label4.Name = "label4";
-			label4.Size = new Size(107, 20);
+			label4.Size = new Size(114, 20);
 			label4.TabIndex = 15;
 			label4.Text = "PRECIO VENTA";
 			// 
 			// label3
 			// 
 			label3.AutoSize = true;
-			label3.Location = new Point(89, 161);
+			label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+			label3.ForeColor = Color.White;
+			label3.Location = new Point(41, 369);
 			label3.Name = "label3";
-			label3.Size = new Size(83, 20);
+			label3.Size = new Size(88, 20);
 			label3.TabIndex = 14;
 			label3.Text = "CANTIDAD";
 			label3.Click += label3_Click;
@@ -128,18 +143,22 @@
 			// label2
 			// 
 			label2.AutoSize = true;
-			label2.Location = new Point(72, 86);
+			label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+			label2.ForeColor = Color.White;
+			label2.Location = new Point(41, 242);
 			label2.Name = "label2";
-			label2.Size = new Size(100, 20);
+			label2.Size = new Size(105, 20);
 			label2.TabIndex = 13;
 			label2.Text = "IDPRODUCTO";
 			// 
 			// label1
 			// 
 			label1.AutoSize = true;
-			label1.Location = new Point(83, 43);
+			label1.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+			label1.ForeColor = Color.White;
+			label1.Location = new Point(41, 177);
 			label1.Name = "label1";
-			label1.Size = new Size(89, 20);
+			label1.Size = new Size(94, 20);
 			label1.TabIndex = 12;
 			label1.Text = "ID INGRESO";
 			label1.Click += label1_Click;
@@ -147,45 +166,53 @@
 			// label6
 			// 
 			label6.AutoSize = true;
-			label6.Location = new Point(64, 196);
+			label6.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+			label6.ForeColor = Color.White;
+			label6.Location = new Point(41, 435);
 			label6.Name = "label6";
-			label6.Size = new Size(108, 20);
+			label6.Size = new Size(112, 20);
 			label6.TabIndex = 24;
 			label6.Text = "PRECIO COSTO";
 			// 
 			// label7
 			// 
 			label7.AutoSize = true;
-			label7.Location = new Point(19, 123);
+			label7.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+			label7.ForeColor = Color.White;
+			label7.Location = new Point(41, 304);
 			label7.Name = "label7";
-			label7.Size = new Size(153, 20);
+			label7.Size = new Size(162, 20);
 			label7.TabIndex = 25;
 			label7.Text = "FECHA VENCIMIENTO";
 			// 
 			// textBox6
 			// 
-			textBox6.Location = new Point(178, 229);
+			textBox6.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+			textBox6.Location = new Point(82, 522);
 			textBox6.Name = "textBox6";
 			textBox6.Size = new Size(334, 27);
 			textBox6.TabIndex = 26;
 			// 
 			// dateTimePicker1
 			// 
-			dateTimePicker1.Location = new Point(178, 121);
+			dateTimePicker1.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+			dateTimePicker1.Location = new Point(82, 327);
 			dateTimePicker1.Name = "dateTimePicker1";
 			dateTimePicker1.Size = new Size(334, 27);
 			dateTimePicker1.TabIndex = 27;
 			// 
 			// textBox7
 			// 
-			textBox7.Location = new Point(178, 262);
+			textBox7.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+			textBox7.Location = new Point(82, 586);
 			textBox7.Name = "textBox7";
 			textBox7.Size = new Size(334, 27);
 			textBox7.TabIndex = 28;
 			// 
 			// button4
 			// 
-			button4.Location = new Point(396, 82);
+			button4.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+			button4.Location = new Point(300, 264);
 			button4.Name = "button4";
 			button4.Size = new Size(116, 29);
 			button4.TabIndex = 48;
@@ -195,7 +222,8 @@
 			// 
 			// button3
 			// 
-			button3.Location = new Point(396, 43);
+			button3.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+			button3.Location = new Point(300, 199);
 			button3.Name = "button3";
 			button3.Size = new Size(116, 29);
 			button3.TabIndex = 47;
@@ -203,11 +231,35 @@
 			button3.UseVisualStyleBackColor = true;
 			button3.Click += button3_Click;
 			// 
+			// pictureBox1
+			// 
+			pictureBox1.Image = Properties.Resources.icons8_dinero_externo_ingreso_pasivo_xnimrodx_gradiente_lineal_xnimrodx_50;
+			pictureBox1.Location = new Point(178, 58);
+			pictureBox1.Name = "pictureBox1";
+			pictureBox1.Size = new Size(129, 118);
+			pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+			pictureBox1.TabIndex = 50;
+			pictureBox1.TabStop = false;
+			// 
+			// label8
+			// 
+			label8.AutoSize = true;
+			label8.Font = new Font("Arial Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			label8.ForeColor = Color.White;
+			label8.Location = new Point(76, 9);
+			label8.Name = "label8";
+			label8.Size = new Size(340, 28);
+			label8.TabIndex = 49;
+			label8.Text = "AGREGAR DETALLE INGRESO";
+			// 
 			// DetalleIngInsertarVista
 			// 
 			AutoScaleDimensions = new SizeF(8F, 20F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(568, 402);
+			BackColor = Color.DarkSlateBlue;
+			ClientSize = new Size(485, 685);
+			Controls.Add(pictureBox1);
+			Controls.Add(label8);
 			Controls.Add(button4);
 			Controls.Add(button3);
 			Controls.Add(textBox7);
@@ -227,8 +279,10 @@
 			Controls.Add(label2);
 			Controls.Add(label1);
 			Name = "DetalleIngInsertarVista";
+			StartPosition = FormStartPosition.CenterScreen;
 			Text = "DetalleIngInsertarVista";
 			Load += DetalleIngInsertarVista_Load;
+			((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
 			ResumeLayout(false);
 			PerformLayout();
 		}
@@ -253,5 +307,7 @@
         private TextBox textBox7;
         private Button button4;
         private Button button3;
-    }
+		private PictureBox pictureBox1;
+		private Label label8;
+	}
 }

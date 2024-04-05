@@ -28,7 +28,6 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClienteEditarVistaVend));
 			pictureBox1 = new PictureBox();
 			button3 = new Button();
 			button2 = new Button();
@@ -42,81 +41,90 @@
 			// 
 			// pictureBox1
 			// 
-			pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-			pictureBox1.Location = new Point(143, 22);
+			pictureBox1.Image = Properties.Resources.icons8_cliente_50;
+			pictureBox1.Location = new Point(166, 112);
 			pictureBox1.Name = "pictureBox1";
 			pictureBox1.Size = new Size(129, 118);
 			pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-			pictureBox1.TabIndex = 50;
+			pictureBox1.TabIndex = 42;
 			pictureBox1.TabStop = false;
 			// 
 			// button3
 			// 
-			button3.Location = new Point(260, 214);
+			button3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			button3.Location = new Point(255, 282);
 			button3.Name = "button3";
 			button3.Size = new Size(114, 29);
-			button3.TabIndex = 49;
+			button3.TabIndex = 41;
 			button3.Text = "SELECCIONAR";
 			button3.UseVisualStyleBackColor = true;
 			// 
 			// button2
 			// 
 			button2.DialogResult = DialogResult.Cancel;
-			button2.Location = new Point(208, 375);
+			button2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			button2.Location = new Point(233, 480);
 			button2.Name = "button2";
 			button2.Size = new Size(94, 29);
-			button2.TabIndex = 48;
+			button2.TabIndex = 40;
 			button2.Text = "CANCELAR";
 			button2.UseVisualStyleBackColor = true;
 			// 
 			// button1
 			// 
 			button1.DialogResult = DialogResult.OK;
-			button1.Location = new Point(82, 375);
+			button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			button1.Location = new Point(116, 480);
 			button1.Name = "button1";
 			button1.Size = new Size(94, 29);
-			button1.TabIndex = 47;
+			button1.TabIndex = 39;
 			button1.Text = "GUARDAR";
 			button1.UseVisualStyleBackColor = true;
 			// 
 			// textBox3
 			// 
-			textBox3.Location = new Point(40, 321);
+			textBox3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			textBox3.Location = new Point(78, 404);
 			textBox3.Name = "textBox3";
-			textBox3.Size = new Size(334, 27);
-			textBox3.TabIndex = 46;
+			textBox3.Size = new Size(291, 27);
+			textBox3.TabIndex = 38;
 			textBox3.Text = "CODIGO CLIENTE";
 			// 
 			// textBox2
 			// 
-			textBox2.Location = new Point(40, 266);
+			textBox2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			textBox2.Location = new Point(78, 344);
 			textBox2.Name = "textBox2";
-			textBox2.Size = new Size(334, 27);
-			textBox2.TabIndex = 45;
+			textBox2.Size = new Size(291, 27);
+			textBox2.TabIndex = 37;
 			textBox2.Text = "TIPO CLIENTE";
 			// 
 			// textBox1
 			// 
-			textBox1.Location = new Point(40, 214);
+			textBox1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			textBox1.Location = new Point(78, 284);
 			textBox1.Name = "textBox1";
-			textBox1.Size = new Size(214, 27);
-			textBox1.TabIndex = 44;
+			textBox1.Size = new Size(155, 27);
+			textBox1.TabIndex = 36;
 			textBox1.Text = "ID PERSONA";
 			// 
 			// label1
 			// 
 			label1.AutoSize = true;
-			label1.Location = new Point(16, 159);
+			label1.Font = new Font("Arial Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			label1.ForeColor = Color.White;
+			label1.Location = new Point(129, 60);
 			label1.Name = "label1";
-			label1.Size = new Size(117, 20);
-			label1.TabIndex = 43;
+			label1.Size = new Size(198, 28);
+			label1.TabIndex = 35;
 			label1.Text = "EDITAR CLIENTE";
 			// 
 			// ClienteEditarVistaVend
 			// 
 			AutoScaleDimensions = new SizeF(8F, 20F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(400, 450);
+			BackColor = Color.DarkSlateBlue;
+			ClientSize = new Size(456, 594);
 			Controls.Add(pictureBox1);
 			Controls.Add(button3);
 			Controls.Add(button2);
@@ -126,6 +134,7 @@
 			Controls.Add(textBox1);
 			Controls.Add(label1);
 			Name = "ClienteEditarVistaVend";
+			StartPosition = FormStartPosition.CenterScreen;
 			Text = "ClienteEditarVistaVend";
 			((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
 			ResumeLayout(false);

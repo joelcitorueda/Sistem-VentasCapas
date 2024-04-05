@@ -56,6 +56,7 @@
 			button3.TabIndex = 41;
 			button3.Text = "SELECCIONAR";
 			button3.UseVisualStyleBackColor = true;
+			button3.Click += button3_Click;
 			// 
 			// button1
 			// 
@@ -66,6 +67,7 @@
 			button1.TabIndex = 39;
 			button1.Text = "ELIMINAR CLIENTE";
 			button1.UseVisualStyleBackColor = true;
+			button1.Click += button1_Click;
 			// 
 			// textBox1
 			// 

@@ -39,9 +39,10 @@
 			// 
 			// checkedListBox1
 			// 
+			checkedListBox1.Font = new Font("Arial", 9F, FontStyle.Bold);
 			checkedListBox1.FormattingEnabled = true;
 			checkedListBox1.Items.AddRange(new object[] { "QR", "TRANSFERENCIA", "EFECTIVO" });
-			checkedListBox1.Location = new Point(52, 153);
+			checkedListBox1.Location = new Point(139, 223);
 			checkedListBox1.Name = "checkedListBox1";
 			checkedListBox1.Size = new Size(150, 70);
 			checkedListBox1.TabIndex = 0;
@@ -49,26 +50,29 @@
 			// label1
 			// 
 			label1.AutoSize = true;
-			label1.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-			label1.Location = new Point(20, 118);
+			label1.Font = new Font("Arial Black", 10.8F, FontStyle.Bold);
+			label1.ForeColor = Color.White;
+			label1.Location = new Point(20, 174);
 			label1.Name = "label1";
-			label1.Size = new Size(292, 23);
+			label1.Size = new Size(355, 26);
 			label1.TabIndex = 1;
 			label1.Text = "QUE METODO DE PAGO OCUPARA?";
 			// 
 			// label2
 			// 
 			label2.AutoSize = true;
-			label2.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-			label2.Location = new Point(20, 245);
+			label2.Font = new Font("Arial Black", 10.8F, FontStyle.Bold);
+			label2.ForeColor = Color.White;
+			label2.Location = new Point(20, 335);
 			label2.Name = "label2";
-			label2.Size = new Size(344, 23);
+			label2.Size = new Size(431, 26);
 			label2.TabIndex = 2;
 			label2.Text = "ESTA SEGURO DE REALIZAR LA COMPRA?";
 			// 
 			// button1
 			// 
-			button1.Location = new Point(61, 283);
+			button1.Font = new Font("Arial", 9F, FontStyle.Bold);
+			button1.Location = new Point(75, 385);
 			button1.Name = "button1";
 			button1.Size = new Size(124, 29);
 			button1.TabIndex = 3;
@@ -77,7 +81,8 @@
 			// 
 			// button2
 			// 
-			button2.Location = new Point(203, 283);
+			button2.Font = new Font("Arial", 9F, FontStyle.Bold);
+			button2.Location = new Point(251, 385);
 			button2.Name = "button2";
 			button2.Size = new Size(124, 29);
 			button2.TabIndex = 4;
@@ -86,10 +91,10 @@
 			// 
 			// pictureBox1
 			// 
-			pictureBox1.Image = Properties.Resources.archivo_factura_dolar;
-			pictureBox1.Location = new Point(130, 12);
+			pictureBox1.Image = Properties.Resources.icons8_comprar_502;
+			pictureBox1.Location = new Point(185, 25);
 			pictureBox1.Name = "pictureBox1";
-			pictureBox1.Size = new Size(89, 91);
+			pictureBox1.Size = new Size(134, 131);
 			pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
 			pictureBox1.TabIndex = 5;
 			pictureBox1.TabStop = false;
@@ -98,7 +103,8 @@
 			// 
 			AutoScaleDimensions = new SizeF(8F, 20F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(390, 340);
+			BackColor = Color.DarkSlateBlue;
+			ClientSize = new Size(524, 476);
 			Controls.Add(pictureBox1);
 			Controls.Add(button2);
 			Controls.Add(button1);
@@ -106,6 +112,7 @@
 			Controls.Add(label1);
 			Controls.Add(checkedListBox1);
 			Name = "ProductoComprarVistaProvee";
+			StartPosition = FormStartPosition.CenterScreen;
 			Text = "ProductoComprarVistaProvee";
 			((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
 			ResumeLayout(false);

@@ -29,7 +29,9 @@
 		private void InitializeComponent()
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UsuarioRolListarVista));
-			dataGridView1 = new DataGridView();
+			DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+			DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+			DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
 			button4 = new Button();
 			button3 = new Button();
 			button2 = new Button();
@@ -51,25 +53,15 @@
 			button8 = new Button();
 			button7 = new Button();
 			button6 = new Button();
-			((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+			dataGridView1 = new DataGridView();
+			button19 = new Button();
 			pServicios.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
 			SuspendLayout();
-			// 
-			// dataGridView1
-			// 
-			dataGridView1.AllowUserToAddRows = false;
-			dataGridView1.AllowUserToDeleteRows = false;
-			dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			dataGridView1.Location = new Point(78, 167);
-			dataGridView1.Margin = new Padding(3, 4, 3, 4);
-			dataGridView1.Name = "dataGridView1";
-			dataGridView1.ReadOnly = true;
-			dataGridView1.RowHeadersWidth = 51;
-			dataGridView1.Size = new Size(644, 383);
-			dataGridView1.TabIndex = 2;
 			// 
 			// button4
 			// 
+			button4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
 			button4.Image = Properties.Resources.icons8_eliminar_27;
 			button4.ImageAlign = ContentAlignment.MiddleRight;
 			button4.Location = new Point(409, 63);
@@ -82,6 +74,7 @@
 			// 
 			// button3
 			// 
+			button3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
 			button3.Image = Properties.Resources.icons8_editar_27;
 			button3.ImageAlign = ContentAlignment.MiddleRight;
 			button3.Location = new Point(216, 63);
@@ -94,6 +87,7 @@
 			// 
 			// button2
 			// 
+			button2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
 			button2.Image = Properties.Resources.icons8_agregar_usuario_masculino_30;
 			button2.ImageAlign = ContentAlignment.MiddleRight;
 			button2.Location = new Point(31, 63);
@@ -107,6 +101,7 @@
 			// button1
 			// 
 			button1.DialogResult = DialogResult.OK;
+			button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
 			button1.Image = Properties.Resources.icons8_marque_todas_las_27;
 			button1.ImageAlign = ContentAlignment.MiddleRight;
 			button1.Location = new Point(597, 63);
@@ -120,7 +115,7 @@
 			// button5
 			// 
 			button5.Image = (Image)resources.GetObject("button5.Image");
-			button5.Location = new Point(684, 14);
+			button5.Location = new Point(817, 14);
 			button5.Name = "button5";
 			button5.Size = new Size(62, 43);
 			button5.TabIndex = 17;
@@ -130,26 +125,29 @@
 			// label2
 			// 
 			label2.AutoSize = true;
-			label2.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-			label2.Location = new Point(207, 21);
+			label2.BackColor = Color.DarkSlateBlue;
+			label2.Font = new Font("Arial Black", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			label2.ForeColor = Color.White;
+			label2.Location = new Point(126, 14);
 			label2.Name = "label2";
-			label2.Size = new Size(336, 25);
+			label2.Size = new Size(590, 40);
 			label2.TabIndex = 19;
 			label2.Text = "ADMINISTRACION DE USUARIOS ROL";
 			// 
 			// label1
 			// 
 			label1.AutoSize = true;
-			label1.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-			label1.Location = new Point(31, 119);
+			label1.Font = new Font("Arial Black", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			label1.ForeColor = Color.White;
+			label1.Location = new Point(31, 149);
 			label1.Name = "label1";
-			label1.Size = new Size(271, 25);
+			label1.Size = new Size(405, 32);
 			label1.TabIndex = 20;
 			label1.Text = "LISTADO DE USUARIOS ROLES";
 			// 
 			// pServicios
 			// 
-			pServicios.BackColor = Color.SlateBlue;
+			pServicios.BackColor = Color.DarkSlateBlue;
 			pServicios.Controls.Add(button18);
 			pServicios.Controls.Add(button17);
 			pServicios.Controls.Add(button16);
@@ -163,7 +161,7 @@
 			pServicios.Controls.Add(button8);
 			pServicios.Controls.Add(button7);
 			pServicios.Controls.Add(button6);
-			pServicios.Location = new Point(588, 52);
+			pServicios.Location = new Point(721, 52);
 			pServicios.Name = "pServicios";
 			pServicios.Size = new Size(158, 548);
 			pServicios.TabIndex = 21;
@@ -325,11 +323,67 @@
 			button6.UseVisualStyleBackColor = true;
 			button6.Click += button6_Click;
 			// 
+			// dataGridView1
+			// 
+			dataGridView1.AllowUserToAddRows = false;
+			dataGridView1.AllowUserToDeleteRows = false;
+			dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+			dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+			dataGridView1.BackgroundColor = Color.DarkSlateBlue;
+			dataGridView1.BorderStyle = BorderStyle.None;
+			dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+			dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+			dataGridViewCellStyle1.BackColor = Color.SlateBlue;
+			dataGridViewCellStyle1.Font = new Font("Arial", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			dataGridViewCellStyle1.ForeColor = Color.White;
+			dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+			dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+			dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+			dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+			dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			dataGridView1.EnableHeadersVisualStyles = false;
+			dataGridView1.GridColor = Color.SteelBlue;
+			dataGridView1.Location = new Point(69, 213);
+			dataGridView1.Margin = new Padding(3, 4, 3, 4);
+			dataGridView1.Name = "dataGridView1";
+			dataGridView1.ReadOnly = true;
+			dataGridView1.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+			dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle2.BackColor = Color.SlateBlue;
+			dataGridViewCellStyle2.Font = new Font("Arial", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			dataGridViewCellStyle2.ForeColor = Color.White;
+			dataGridViewCellStyle2.SelectionBackColor = Color.SteelBlue;
+			dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+			dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+			dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+			dataGridView1.RowHeadersWidth = 51;
+			dataGridViewCellStyle3.BackColor = Color.DarkSlateBlue;
+			dataGridViewCellStyle3.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+			dataGridViewCellStyle3.ForeColor = Color.White;
+			dataGridViewCellStyle3.SelectionBackColor = Color.SlateBlue;
+			dataGridViewCellStyle3.SelectionForeColor = Color.White;
+			dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
+			dataGridView1.Size = new Size(781, 337);
+			dataGridView1.TabIndex = 28;
+			// 
+			// button19
+			// 
+			button19.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			button19.Image = Properties.Resources.icons8_cerrar_sesión_27;
+			button19.Location = new Point(12, 12);
+			button19.Name = "button19";
+			button19.Size = new Size(62, 34);
+			button19.TabIndex = 29;
+			button19.UseVisualStyleBackColor = true;
+			button19.Click += button19_Click;
+			// 
 			// UsuarioRolListarVista
 			// 
 			AutoScaleDimensions = new SizeF(8F, 20F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(771, 612);
+			BackColor = Color.DarkSlateBlue;
+			ClientSize = new Size(914, 612);
+			Controls.Add(button19);
 			Controls.Add(pServicios);
 			Controls.Add(label1);
 			Controls.Add(label2);
@@ -340,18 +394,17 @@
 			Controls.Add(button1);
 			Controls.Add(dataGridView1);
 			Name = "UsuarioRolListarVista";
+			StartPosition = FormStartPosition.CenterScreen;
 			Text = "UsuarioRolListarVista";
 			Load += UsuarioRolListarVista_Load;
-			((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
 			pServicios.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
 			ResumeLayout(false);
 			PerformLayout();
 		}
 
 		#endregion
-
-		private DataGridView dataGridView1;
-        private Button button4;
+		private Button button4;
         private Button button3;
         private Button button2;
         private Button button1;
@@ -372,5 +425,7 @@
 		private Button button8;
 		private Button button7;
 		private Button button6;
+		private DataGridView dataGridView1;
+		private Button button19;
 	}
 }

@@ -3,6 +3,7 @@ using SistemasVentas.VISTA.ClienteVistas;
 using SistemasVentas.VISTA.DetalleIngVistas;
 using SistemasVentas.VISTA.DetalleVentaVistas;
 using SistemasVentas.VISTA.IngresoVistas;
+using SistemasVentas.VISTA.LoginIniciarSecion;
 using SistemasVentas.VISTA.MarcaVistas;
 using SistemasVentas.VISTA.PersonaVistas;
 using SistemasVentas.VISTA.ProductoVistas;
@@ -39,6 +40,8 @@ namespace SistemasVentas.VISTA.VentaVistas
 		private void button2_Click(object sender, EventArgs e)
 		{
 			VentaInsertarVista fr = new VentaInsertarVista();
+			this.Hide();
+			fr.FormClosing += frm_closing;
 			if (fr.ShowDialog() == DialogResult.OK)
 			{
 				dataGridView1.DataSource = bss.ListarVentaBss();
@@ -49,6 +52,8 @@ namespace SistemasVentas.VISTA.VentaVistas
 		{
 			int IdSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
 			VentaEditarVista fr = new VentaEditarVista(IdSeleccionada);
+			this.Hide();
+			fr.FormClosing += frm_closing;
 			if (fr.ShowDialog() == DialogResult.OK)
 			{
 				dataGridView1.DataSource = bss.ListarVentaBss();
@@ -184,6 +189,14 @@ namespace SistemasVentas.VISTA.VentaVistas
 		{
 			this.Hide();
 			UsuarioListarVista fr = new UsuarioListarVista();
+			fr.Show();
+			fr.FormClosing += frm_closing;
+		}
+
+		private void button19_Click(object sender, EventArgs e)
+		{
+			this.Hide();
+			LoginIniciarSecionV fr = new LoginIniciarSecionV();
 			fr.Show();
 			fr.FormClosing += frm_closing;
 		}

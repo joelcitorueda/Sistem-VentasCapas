@@ -29,7 +29,9 @@
 		private void InitializeComponent()
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PersonaListarVista));
-			dataGridView1 = new DataGridView();
+			DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+			DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+			DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
 			button1 = new Button();
 			button2 = new Button();
 			button3 = new Button();
@@ -51,27 +53,16 @@
 			button8 = new Button();
 			button7 = new Button();
 			button6 = new Button();
-			((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+			dataGridView1 = new DataGridView();
+			button19 = new Button();
 			pServicios.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
 			SuspendLayout();
-			// 
-			// dataGridView1
-			// 
-			dataGridView1.AllowUserToAddRows = false;
-			dataGridView1.AllowUserToDeleteRows = false;
-			dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			dataGridView1.Location = new Point(74, 188);
-			dataGridView1.Margin = new Padding(3, 4, 3, 4);
-			dataGridView1.Name = "dataGridView1";
-			dataGridView1.ReadOnly = true;
-			dataGridView1.RowHeadersWidth = 51;
-			dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-			dataGridView1.Size = new Size(690, 376);
-			dataGridView1.TabIndex = 0;
 			// 
 			// button1
 			// 
 			button1.DialogResult = DialogResult.OK;
+			button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
 			button1.Image = Properties.Resources.icons8_marque_todas_las_27;
 			button1.ImageAlign = ContentAlignment.MiddleRight;
 			button1.Location = new Point(631, 70);
@@ -84,6 +75,7 @@
 			// 
 			// button2
 			// 
+			button2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
 			button2.Image = Properties.Resources.icons8_agregar_usuario_masculino_30;
 			button2.ImageAlign = ContentAlignment.MiddleRight;
 			button2.Location = new Point(27, 70);
@@ -96,6 +88,7 @@
 			// 
 			// button3
 			// 
+			button3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
 			button3.Image = Properties.Resources.icons8_editar_27;
 			button3.ImageAlign = ContentAlignment.MiddleRight;
 			button3.Location = new Point(228, 70);
@@ -108,6 +101,7 @@
 			// 
 			// button4
 			// 
+			button4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
 			button4.Image = Properties.Resources.icons8_eliminar_27;
 			button4.ImageAlign = ContentAlignment.MiddleRight;
 			button4.Location = new Point(432, 70);
@@ -121,7 +115,7 @@
 			// button5
 			// 
 			button5.Image = (Image)resources.GetObject("button5.Image");
-			button5.Location = new Point(738, 10);
+			button5.Location = new Point(913, 12);
 			button5.Name = "button5";
 			button5.Size = new Size(62, 43);
 			button5.TabIndex = 21;
@@ -131,26 +125,29 @@
 			// label2
 			// 
 			label2.AutoSize = true;
-			label2.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-			label2.Location = new Point(265, 28);
+			label2.BackColor = Color.DarkSlateBlue;
+			label2.Font = new Font("Arial Black", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			label2.ForeColor = Color.White;
+			label2.Location = new Point(243, 12);
 			label2.Name = "label2";
-			label2.Size = new Size(299, 25);
+			label2.Size = new Size(524, 40);
 			label2.TabIndex = 23;
 			label2.Text = "ADMINISTRACION DE PERSONAS";
 			// 
 			// label1
 			// 
 			label1.AutoSize = true;
-			label1.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			label1.Font = new Font("Arial Black", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			label1.ForeColor = Color.White;
 			label1.Location = new Point(27, 139);
 			label1.Name = "label1";
-			label1.Size = new Size(214, 25);
+			label1.Size = new Size(318, 32);
 			label1.TabIndex = 24;
 			label1.Text = "LISTADO DE PERSONAS";
 			// 
 			// pServicios
 			// 
-			pServicios.BackColor = Color.SlateBlue;
+			pServicios.BackColor = Color.DarkSlateBlue;
 			pServicios.Controls.Add(button18);
 			pServicios.Controls.Add(button17);
 			pServicios.Controls.Add(button16);
@@ -164,7 +161,7 @@
 			pServicios.Controls.Add(button8);
 			pServicios.Controls.Add(button7);
 			pServicios.Controls.Add(button6);
-			pServicios.Location = new Point(642, 49);
+			pServicios.Location = new Point(817, 61);
 			pServicios.Name = "pServicios";
 			pServicios.Size = new Size(158, 548);
 			pServicios.TabIndex = 25;
@@ -326,11 +323,69 @@
 			button6.UseVisualStyleBackColor = true;
 			button6.Click += button6_Click;
 			// 
+			// dataGridView1
+			// 
+			dataGridView1.AllowUserToAddRows = false;
+			dataGridView1.AllowUserToDeleteRows = false;
+			dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+			dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+			dataGridView1.BackgroundColor = Color.DarkSlateBlue;
+			dataGridView1.BorderStyle = BorderStyle.None;
+			dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+			dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
+			dataGridViewCellStyle4.BackColor = Color.SlateBlue;
+			dataGridViewCellStyle4.Font = new Font("Arial", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			dataGridViewCellStyle4.ForeColor = Color.White;
+			dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+			dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+			dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+			dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+			dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			dataGridView1.EnableHeadersVisualStyles = false;
+			dataGridView1.GridColor = Color.SteelBlue;
+			dataGridView1.Location = new Point(94, 190);
+			dataGridView1.Margin = new Padding(3, 4, 3, 4);
+			dataGridView1.Name = "dataGridView1";
+			dataGridView1.ReadOnly = true;
+			dataGridView1.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+			dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle5.BackColor = Color.SlateBlue;
+			dataGridViewCellStyle5.Font = new Font("Arial", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			dataGridViewCellStyle5.ForeColor = Color.White;
+			dataGridViewCellStyle5.SelectionBackColor = Color.SteelBlue;
+			dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
+			dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
+			dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+			dataGridView1.RowHeadersWidth = 51;
+			dataGridViewCellStyle6.BackColor = Color.DarkSlateBlue;
+			dataGridViewCellStyle6.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+			dataGridViewCellStyle6.ForeColor = Color.White;
+			dataGridViewCellStyle6.SelectionBackColor = Color.SlateBlue;
+			dataGridViewCellStyle6.SelectionForeColor = Color.White;
+			dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle6;
+			dataGridView1.Size = new Size(924, 389);
+			dataGridView1.TabIndex = 27;
+			// 
+			// button19
+			// 
+			button19.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			button19.Image = Properties.Resources.icons8_cerrar_sesión_27;
+			button19.ImageAlign = ContentAlignment.MiddleRight;
+			button19.Location = new Point(12, 12);
+			button19.Name = "button19";
+			button19.Size = new Size(124, 34);
+			button19.TabIndex = 28;
+			button19.Text = "Log Out";
+			button19.UseVisualStyleBackColor = true;
+			button19.Click += button19_Click;
+			// 
 			// PersonaListarVista
 			// 
 			AutoScaleDimensions = new SizeF(8F, 20F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(812, 605);
+			BackColor = Color.DarkSlateBlue;
+			ClientSize = new Size(1052, 605);
+			Controls.Add(button19);
 			Controls.Add(pServicios);
 			Controls.Add(label1);
 			Controls.Add(label2);
@@ -345,16 +400,14 @@
 			StartPosition = FormStartPosition.CenterScreen;
 			Text = "PersonaListarVista";
 			Load += PersonaListarVista_Load;
-			((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
 			pServicios.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
 			ResumeLayout(false);
 			PerformLayout();
 		}
 
 		#endregion
-
-		private DataGridView dataGridView1;
-        private Button button1;
+		private Button button1;
         private Button button2;
         private Button button3;
         private Button button4;
@@ -375,5 +428,7 @@
 		private Button button8;
 		private Button button7;
 		private Button button6;
+		private DataGridView dataGridView1;
+		private Button button19;
 	}
 }

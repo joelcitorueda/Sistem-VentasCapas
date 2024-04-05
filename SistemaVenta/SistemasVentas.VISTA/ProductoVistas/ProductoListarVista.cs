@@ -3,6 +3,7 @@ using SistemasVentas.VISTA.ClienteVistas;
 using SistemasVentas.VISTA.DetalleIngVistas;
 using SistemasVentas.VISTA.DetalleVentaVistas;
 using SistemasVentas.VISTA.IngresoVistas;
+using SistemasVentas.VISTA.LoginIniciarSecion;
 using SistemasVentas.VISTA.MarcaVistas;
 using SistemasVentas.VISTA.PersonaVistas;
 using SistemasVentas.VISTA.ProveedorVistas;
@@ -44,11 +45,14 @@ namespace SistemasVentas.VISTA.ProductoVistas
 			DetalleVentaVistas.DetalleVentaEditarVista.IdProductoSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
 			DetalleIngVistas.DetalleIngEditarVista.IdProductoSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
 			ProveeVistas.ProveeEditarVista.IdProductoSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+			ProductoVistasProvee.ProductoBuscarVistaProvee.IdProductoSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
 		}
 
 		private void button2_Click(object sender, EventArgs e)
 		{
 			ProductoInsertarVista fr = new ProductoInsertarVista();
+			this.Hide();
+			fr.FormClosing += frm_closing;
 			if (fr.ShowDialog() == DialogResult.OK)
 			{
 				dataGridView1.DataSource = bss.ListarProductoBss();
@@ -59,6 +63,8 @@ namespace SistemasVentas.VISTA.ProductoVistas
 		{
 			int IdSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
 			ProductoEditarVista fr = new ProductoEditarVista(IdSeleccionada);
+			this.Hide();
+			fr.FormClosing += frm_closing;
 			if (fr.ShowDialog() == DialogResult.OK)
 			{
 				dataGridView1.DataSource = bss.ListarProductoBss();
@@ -195,6 +201,14 @@ namespace SistemasVentas.VISTA.ProductoVistas
 				pServicios.Visible = true;
 			else
 				pServicios.Visible = false;
+		}
+
+		private void button5_Click_1(object sender, EventArgs e)
+		{
+			this.Hide();
+			LoginIniciarSecionV fr = new LoginIniciarSecionV();
+			fr.Show();
+			fr.FormClosing += frm_closing;
 		}
 	}
 }

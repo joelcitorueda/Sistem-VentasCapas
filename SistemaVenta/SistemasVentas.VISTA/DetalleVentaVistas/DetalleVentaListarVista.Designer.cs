@@ -29,7 +29,9 @@
 		private void InitializeComponent()
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DetalleVentaListarVista));
-			dataGridView1 = new DataGridView();
+			DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+			DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+			DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
 			button4 = new Button();
 			button3 = new Button();
 			button2 = new Button();
@@ -39,7 +41,6 @@
 			label1 = new Label();
 			btnGuardarPDF = new Button();
 			btnGuardarExcel = new Button();
-			label3 = new Label();
 			pServicios = new Panel();
 			button18 = new Button();
 			button17 = new Button();
@@ -54,25 +55,15 @@
 			button8 = new Button();
 			button7 = new Button();
 			button6 = new Button();
-			((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+			dataGridView1 = new DataGridView();
+			button19 = new Button();
 			pServicios.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
 			SuspendLayout();
-			// 
-			// dataGridView1
-			// 
-			dataGridView1.AllowUserToAddRows = false;
-			dataGridView1.AllowUserToDeleteRows = false;
-			dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			dataGridView1.Location = new Point(63, 179);
-			dataGridView1.Margin = new Padding(3, 4, 3, 4);
-			dataGridView1.Name = "dataGridView1";
-			dataGridView1.ReadOnly = true;
-			dataGridView1.RowHeadersWidth = 51;
-			dataGridView1.Size = new Size(706, 373);
-			dataGridView1.TabIndex = 2;
 			// 
 			// button4
 			// 
+			button4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
 			button4.Image = Properties.Resources.icons8_eliminar_27;
 			button4.ImageAlign = ContentAlignment.MiddleRight;
 			button4.Location = new Point(435, 64);
@@ -85,6 +76,7 @@
 			// 
 			// button3
 			// 
+			button3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
 			button3.Image = Properties.Resources.icons8_editar_27;
 			button3.ImageAlign = ContentAlignment.MiddleRight;
 			button3.Location = new Point(231, 64);
@@ -97,6 +89,7 @@
 			// 
 			// button2
 			// 
+			button2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
 			button2.Image = (Image)resources.GetObject("button2.Image");
 			button2.ImageAlign = ContentAlignment.MiddleRight;
 			button2.Location = new Point(24, 64);
@@ -110,6 +103,7 @@
 			// button1
 			// 
 			button1.DialogResult = DialogResult.OK;
+			button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
 			button1.Image = Properties.Resources.icons8_marque_todas_las_27;
 			button1.ImageAlign = ContentAlignment.MiddleRight;
 			button1.Location = new Point(637, 64);
@@ -124,7 +118,7 @@
 			// 
 			button5.ForeColor = Color.SlateBlue;
 			button5.Image = (Image)resources.GetObject("button5.Image");
-			button5.Location = new Point(766, 12);
+			button5.Location = new Point(1084, 15);
 			button5.Name = "button5";
 			button5.Size = new Size(62, 43);
 			button5.TabIndex = 18;
@@ -134,28 +128,29 @@
 			// label2
 			// 
 			label2.AutoSize = true;
-			label2.BackColor = Color.SlateBlue;
-			label2.Font = new Font("Segoe UI Black", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			label2.BackColor = Color.DarkSlateBlue;
+			label2.Font = new Font("Arial Black", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
 			label2.ForeColor = Color.White;
-			label2.Location = new Point(174, 12);
+			label2.Location = new Point(150, 12);
 			label2.Name = "label2";
-			label2.Size = new Size(479, 31);
+			label2.Size = new Size(648, 40);
 			label2.TabIndex = 19;
 			label2.Text = "ADMINISTRACION DE DETALLES VENTAS";
 			// 
 			// label1
 			// 
 			label1.AutoSize = true;
-			label1.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-			label1.ForeColor = Color.Black;
+			label1.Font = new Font("Arial Black", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			label1.ForeColor = Color.White;
 			label1.Location = new Point(24, 129);
 			label1.Name = "label1";
-			label1.Size = new Size(321, 28);
+			label1.Size = new Size(420, 32);
 			label1.TabIndex = 20;
 			label1.Text = "LISTADO DE DETALLES VENTAS";
 			// 
 			// btnGuardarPDF
 			// 
+			btnGuardarPDF.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
 			btnGuardarPDF.Image = Properties.Resources.icons8_pdf_27;
 			btnGuardarPDF.ImageAlign = ContentAlignment.MiddleRight;
 			btnGuardarPDF.Location = new Point(155, 575);
@@ -168,6 +163,7 @@
 			// 
 			// btnGuardarExcel
 			// 
+			btnGuardarExcel.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
 			btnGuardarExcel.Image = Properties.Resources.icons8_ms_excel_27;
 			btnGuardarExcel.ImageAlign = ContentAlignment.MiddleRight;
 			btnGuardarExcel.Location = new Point(373, 575);
@@ -178,17 +174,9 @@
 			btnGuardarExcel.UseVisualStyleBackColor = true;
 			btnGuardarExcel.Click += btnGuardarExcel_Click;
 			// 
-			// label3
-			// 
-			label3.BackColor = Color.SlateBlue;
-			label3.Location = new Point(0, -8);
-			label3.Name = "label3";
-			label3.Size = new Size(841, 125);
-			label3.TabIndex = 23;
-			// 
 			// pServicios
 			// 
-			pServicios.BackColor = Color.SlateBlue;
+			pServicios.BackColor = Color.DarkSlateBlue;
 			pServicios.Controls.Add(button18);
 			pServicios.Controls.Add(button17);
 			pServicios.Controls.Add(button16);
@@ -202,7 +190,7 @@
 			pServicios.Controls.Add(button8);
 			pServicios.Controls.Add(button7);
 			pServicios.Controls.Add(button6);
-			pServicios.Location = new Point(670, 51);
+			pServicios.Location = new Point(988, 61);
 			pServicios.Name = "pServicios";
 			pServicios.Size = new Size(158, 548);
 			pServicios.TabIndex = 24;
@@ -364,12 +352,69 @@
 			button6.UseVisualStyleBackColor = true;
 			button6.Click += button6_Click;
 			// 
+			// dataGridView1
+			// 
+			dataGridView1.AllowUserToAddRows = false;
+			dataGridView1.AllowUserToDeleteRows = false;
+			dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+			dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+			dataGridView1.BackgroundColor = Color.DarkSlateBlue;
+			dataGridView1.BorderStyle = BorderStyle.None;
+			dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+			dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+			dataGridViewCellStyle1.BackColor = Color.SlateBlue;
+			dataGridViewCellStyle1.Font = new Font("Arial", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			dataGridViewCellStyle1.ForeColor = Color.White;
+			dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+			dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+			dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+			dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+			dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			dataGridView1.EnableHeadersVisualStyles = false;
+			dataGridView1.GridColor = Color.SteelBlue;
+			dataGridView1.Location = new Point(46, 164);
+			dataGridView1.Margin = new Padding(3, 4, 3, 4);
+			dataGridView1.Name = "dataGridView1";
+			dataGridView1.ReadOnly = true;
+			dataGridView1.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+			dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle2.BackColor = Color.SlateBlue;
+			dataGridViewCellStyle2.Font = new Font("Arial", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			dataGridViewCellStyle2.ForeColor = Color.White;
+			dataGridViewCellStyle2.SelectionBackColor = Color.SteelBlue;
+			dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+			dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+			dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+			dataGridView1.RowHeadersWidth = 51;
+			dataGridViewCellStyle3.BackColor = Color.DarkSlateBlue;
+			dataGridViewCellStyle3.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+			dataGridViewCellStyle3.ForeColor = Color.White;
+			dataGridViewCellStyle3.SelectionBackColor = Color.SlateBlue;
+			dataGridViewCellStyle3.SelectionForeColor = Color.White;
+			dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
+			dataGridView1.Size = new Size(1069, 389);
+			dataGridView1.TabIndex = 26;
+			// 
+			// button19
+			// 
+			button19.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			button19.Image = Properties.Resources.icons8_cerrar_sesión_27;
+			button19.ImageAlign = ContentAlignment.MiddleRight;
+			button19.Location = new Point(12, 12);
+			button19.Name = "button19";
+			button19.Size = new Size(124, 34);
+			button19.TabIndex = 27;
+			button19.Text = "Log Out";
+			button19.UseVisualStyleBackColor = true;
+			button19.Click += button19_Click;
+			// 
 			// DetalleVentaListarVista
 			// 
 			AutoScaleDimensions = new SizeF(8F, 20F);
 			AutoScaleMode = AutoScaleMode.Font;
-			BackColor = Color.White;
-			ClientSize = new Size(840, 623);
+			BackColor = Color.DarkSlateBlue;
+			ClientSize = new Size(1171, 623);
+			Controls.Add(button19);
 			Controls.Add(pServicios);
 			Controls.Add(button1);
 			Controls.Add(button4);
@@ -377,25 +422,23 @@
 			Controls.Add(button2);
 			Controls.Add(button5);
 			Controls.Add(label2);
-			Controls.Add(label3);
 			Controls.Add(btnGuardarExcel);
 			Controls.Add(btnGuardarPDF);
 			Controls.Add(label1);
 			Controls.Add(dataGridView1);
 			ForeColor = Color.Black;
 			Name = "DetalleVentaListarVista";
+			StartPosition = FormStartPosition.CenterScreen;
 			Text = "DetalleVentaListarVista";
 			Load += DetalleVentaListarVista_Load;
-			((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
 			pServicios.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
 			ResumeLayout(false);
 			PerformLayout();
 		}
 
 		#endregion
-
-		private DataGridView dataGridView1;
-        private Button button4;
+		private Button button4;
         private Button button3;
         private Button button2;
         private Button button1;
@@ -404,7 +447,6 @@
 		private Label label1;
 		private Button btnGuardarPDF;
 		private Button btnGuardarExcel;
-		private Label label3;
 		private Panel pServicios;
 		private Button button18;
 		private Button button17;
@@ -419,5 +461,7 @@
 		private Button button8;
 		private Button button7;
 		private Button button6;
+		private DataGridView dataGridView1;
+		private Button button19;
 	}
 }

@@ -28,6 +28,9 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+			DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+			DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VentaListarVista));
 			dataGridView1 = new DataGridView();
 			button4 = new Button();
@@ -51,6 +54,7 @@
 			button8 = new Button();
 			button7 = new Button();
 			button6 = new Button();
+			button19 = new Button();
 			((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
 			pServicios.SuspendLayout();
 			SuspendLayout();
@@ -59,17 +63,48 @@
 			// 
 			dataGridView1.AllowUserToAddRows = false;
 			dataGridView1.AllowUserToDeleteRows = false;
+			dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+			dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+			dataGridView1.BackgroundColor = Color.DarkSlateBlue;
+			dataGridView1.BorderStyle = BorderStyle.None;
+			dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+			dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+			dataGridViewCellStyle1.BackColor = Color.SlateBlue;
+			dataGridViewCellStyle1.Font = new Font("Arial", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			dataGridViewCellStyle1.ForeColor = Color.White;
+			dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+			dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+			dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+			dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
 			dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			dataGridView1.Location = new Point(98, 162);
+			dataGridView1.EnableHeadersVisualStyles = false;
+			dataGridView1.GridColor = Color.SteelBlue;
+			dataGridView1.Location = new Point(98, 192);
 			dataGridView1.Margin = new Padding(3, 4, 3, 4);
 			dataGridView1.Name = "dataGridView1";
 			dataGridView1.ReadOnly = true;
+			dataGridView1.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+			dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle2.BackColor = Color.SlateBlue;
+			dataGridViewCellStyle2.Font = new Font("Arial", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			dataGridViewCellStyle2.ForeColor = Color.White;
+			dataGridViewCellStyle2.SelectionBackColor = Color.SteelBlue;
+			dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+			dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+			dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
 			dataGridView1.RowHeadersWidth = 51;
-			dataGridView1.Size = new Size(641, 389);
+			dataGridViewCellStyle3.BackColor = Color.DarkSlateBlue;
+			dataGridViewCellStyle3.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+			dataGridViewCellStyle3.ForeColor = Color.White;
+			dataGridViewCellStyle3.SelectionBackColor = Color.SlateBlue;
+			dataGridViewCellStyle3.SelectionForeColor = Color.White;
+			dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
+			dataGridView1.Size = new Size(806, 389);
 			dataGridView1.TabIndex = 2;
 			// 
 			// button4
 			// 
+			button4.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
 			button4.Image = Properties.Resources.icons8_eliminar_27;
 			button4.ImageAlign = ContentAlignment.MiddleRight;
 			button4.Location = new Point(410, 64);
@@ -82,6 +117,7 @@
 			// 
 			// button3
 			// 
+			button3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
 			button3.Image = Properties.Resources.icons8_editar_27;
 			button3.ImageAlign = ContentAlignment.MiddleRight;
 			button3.Location = new Point(208, 64);
@@ -94,6 +130,7 @@
 			// 
 			// button2
 			// 
+			button2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
 			button2.Image = (Image)resources.GetObject("button2.Image");
 			button2.ImageAlign = ContentAlignment.BottomRight;
 			button2.Location = new Point(29, 64);
@@ -107,6 +144,7 @@
 			// button1
 			// 
 			button1.DialogResult = DialogResult.OK;
+			button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
 			button1.Image = Properties.Resources.icons8_marque_todas_las_27;
 			button1.ImageAlign = ContentAlignment.MiddleRight;
 			button1.Location = new Point(603, 64);
@@ -120,27 +158,30 @@
 			// label2
 			// 
 			label2.AutoSize = true;
-			label2.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-			label2.Location = new Point(239, 21);
+			label2.BackColor = Color.DarkSlateBlue;
+			label2.Font = new Font("Arial Black", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			label2.ForeColor = Color.White;
+			label2.Location = new Point(239, 12);
 			label2.Name = "label2";
-			label2.Size = new Size(274, 25);
+			label2.Size = new Size(479, 40);
 			label2.TabIndex = 34;
 			label2.Text = "ADMINISTRACION DE VENTAS";
 			// 
 			// label1
 			// 
 			label1.AutoSize = true;
-			label1.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-			label1.Location = new Point(56, 118);
+			label1.Font = new Font("Arial Black", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			label1.ForeColor = Color.White;
+			label1.Location = new Point(48, 151);
 			label1.Name = "label1";
-			label1.Size = new Size(189, 25);
+			label1.Size = new Size(280, 32);
 			label1.TabIndex = 35;
 			label1.Text = "LISTADO DE VENTAS";
 			// 
 			// button5
 			// 
 			button5.Image = (Image)resources.GetObject("button5.Image");
-			button5.Location = new Point(697, 11);
+			button5.Location = new Point(844, 12);
 			button5.Name = "button5";
 			button5.Size = new Size(60, 47);
 			button5.TabIndex = 36;
@@ -149,7 +190,7 @@
 			// 
 			// pServicios
 			// 
-			pServicios.BackColor = Color.SlateBlue;
+			pServicios.BackColor = Color.DarkSlateBlue;
 			pServicios.Controls.Add(button18);
 			pServicios.Controls.Add(button17);
 			pServicios.Controls.Add(button16);
@@ -163,7 +204,7 @@
 			pServicios.Controls.Add(button8);
 			pServicios.Controls.Add(button7);
 			pServicios.Controls.Add(button6);
-			pServicios.Location = new Point(599, 54);
+			pServicios.Location = new Point(746, 54);
 			pServicios.Name = "pServicios";
 			pServicios.Size = new Size(158, 548);
 			pServicios.TabIndex = 37;
@@ -325,11 +366,26 @@
 			button6.UseVisualStyleBackColor = true;
 			button6.Click += button6_Click;
 			// 
+			// button19
+			// 
+			button19.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			button19.Image = Properties.Resources.icons8_cerrar_sesión_27;
+			button19.ImageAlign = ContentAlignment.MiddleRight;
+			button19.Location = new Point(12, 12);
+			button19.Name = "button19";
+			button19.Size = new Size(124, 34);
+			button19.TabIndex = 38;
+			button19.Text = "Log Out";
+			button19.UseVisualStyleBackColor = true;
+			button19.Click += button19_Click;
+			// 
 			// VentaListarVista
 			// 
 			AutoScaleDimensions = new SizeF(8F, 20F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(806, 614);
+			BackColor = Color.DarkSlateBlue;
+			ClientSize = new Size(944, 614);
+			Controls.Add(button19);
 			Controls.Add(pServicios);
 			Controls.Add(button5);
 			Controls.Add(label1);
@@ -340,6 +396,7 @@
 			Controls.Add(button1);
 			Controls.Add(dataGridView1);
 			Name = "VentaListarVista";
+			StartPosition = FormStartPosition.CenterScreen;
 			Text = "VentaListarVista";
 			Load += VentaListarVista_Load;
 			((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
@@ -372,5 +429,6 @@
 		private Button button8;
 		private Button button7;
 		private Button button6;
+		private Button button19;
 	}
 }

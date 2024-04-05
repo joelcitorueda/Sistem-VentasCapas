@@ -13,31 +13,40 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace SistemasVentas.VISTA.TipoProdVistas
 {
-    public partial class TipoProdEditarVista : Form
-    {
-        int idx = 0;
-        TipoProd p = new TipoProd();
-        TipoProdBss bss = new TipoProdBss();
-        public TipoProdEditarVista(int id)
-        {
-            idx= id;
-            InitializeComponent();
-        }
+	public partial class TipoProdEditarVista : Form
+	{
+		int idx = 0;
+		TipoProd p = new TipoProd();
+		TipoProdBss bss = new TipoProdBss();
+		public TipoProdEditarVista(int id)
+		{
+			idx = id;
+			InitializeComponent();
+		}
 
-        private void TipoProdEditarVista_Load(object sender, EventArgs e)
-        {
-            p = bss.ObtenerTipoProdIdBss(idx);
-            textBox1.Text = p.Nombre;
-            textBox2.Text = p.Estado;
-        }
+		private void TipoProdEditarVista_Load(object sender, EventArgs e)
+		{
+			p = bss.ObtenerTipoProdIdBss(idx);
+			textBox1.Text = p.Nombre;
+			textBox2.Text = p.Estado;
+		}
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            p.Nombre = textBox1.Text;
-            p.Estado = textBox2.Text;
+		private void button1_Click(object sender, EventArgs e)
+		{
+			p.Nombre = textBox1.Text;
+			p.Estado = textBox2.Text;
 
-            bss.EditarTipoProdBss(p);
-            MessageBox.Show("Datos Actualizados");
-        }
-    }
+			bss.EditarTipoProdBss(p);
+			MessageBox.Show("Datos Actualizados");
+		}
+
+		private void button1_Click_1(object sender, EventArgs e)
+		{
+			p.Nombre = textBox1.Text;
+			p.Estado = textBox2.Text;
+
+			bss.EditarTipoProdBss(p);
+			MessageBox.Show("Datos Actualizados");
+		}
+	}
 }

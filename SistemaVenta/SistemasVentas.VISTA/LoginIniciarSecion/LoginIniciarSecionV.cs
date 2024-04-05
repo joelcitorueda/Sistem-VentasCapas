@@ -15,9 +15,9 @@ using System.Windows.Forms;
 
 namespace SistemasVentas.VISTA.LoginIniciarSecion
 {
-	public partial class LoginIniciarSecion : Form
+	public partial class LoginIniciarSecionV : Form
 	{
-		public LoginIniciarSecion()
+		public LoginIniciarSecionV()
 		{
 			InitializeComponent();
 		}
@@ -26,44 +26,34 @@ namespace SistemasVentas.VISTA.LoginIniciarSecion
 		{
 			string usuario = txtNombreUsuario.Text;
 			string contraseña = txtContraseña.Text;
-			// Crear una instancia de la clase Conexion
 			conexion conexion = new conexion();
 
-			// Autenticar al usuario (comprobar en la base de datos)
 			string cargo = conexion.AutenticarUsuario(usuario, contraseña);
 
 			if (cargo != null)
 			{
-				// Obtener el nombre del usuario
-				string nombreUsuario = ObtenerNombreUsuario(usuario); // Suponiendo que tienes una función para obtener el nombre del usuario
+				string nombreUsuario = ObtenerNombreUsuario(usuario); 
 
-				// Mostrar mensaje de bienvenida
 				string mensajeBienvenida = $"¡Bienvenido, {cargo}";
 
-				// Mostrar rol del usuario
 				mensajeBienvenida += $" {nombreUsuario}.";
 
 				MessageBox.Show(mensajeBienvenida);
-				// Dependiendo del cargo del usuario, redirigir a la ventana correspondiente
 				if (cargo == "Gerente" || cargo == "Administrador")
 				{
-					// Redirigir al formulario del Gerente o Administrador
 					ClienteListarVista gerenteForm = new ClienteListarVista();
 					gerenteForm.Show();
 				}
 				else if (cargo == "Cajero" || cargo == "Vendedor")
 				{
-					// Redirigir al formulario del Cajero o Vendedor
 					ClienteListarVistaVend cajeroForm = new ClienteListarVistaVend();
 					cajeroForm.Show();
 				}
 				else if (cargo == "Guia" || cargo == "Cliente")
 				{
-					// Redirigir al formulario del Guía
 					ProductoListarVistaProvee guiaForm = new ProductoListarVistaProvee();
 					guiaForm.Show();
 				}
-				// Cerrar el formulario actual (Login)
 				this.Hide();
 			}
 			else

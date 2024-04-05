@@ -31,6 +31,7 @@ using SistemasVentas.VISTA.TipoProdVistas;
 using SistemasVentas.VISTA.UsuarioRolVistas;
 using SistemasVentas.VISTA.UsuarioVistas;
 using SistemasVentas.VISTA.VentaVistas;
+using SistemasVentas.VISTA.LoginIniciarSecion;
 
 
 
@@ -51,6 +52,8 @@ namespace SistemasVentas.VISTA.DetalleVentaVistas
 		private void button2_Click(object sender, EventArgs e)
 		{
 			DetalleVentasInsertarVista fr = new DetalleVentasInsertarVista();
+			this.Hide();
+			fr.FormClosing += frm_closing;
 			if (fr.ShowDialog() == DialogResult.OK)
 			{
 				dataGridView1.DataSource = bss.ListarDetalleVentaBss();
@@ -61,6 +64,8 @@ namespace SistemasVentas.VISTA.DetalleVentaVistas
 		{
 			int IdSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
 			DetalleVentaEditarVista fr = new DetalleVentaEditarVista(IdSeleccionada);
+			this.Hide();
+			fr.FormClosing += frm_closing;
 			if (fr.ShowDialog() == DialogResult.OK)
 			{
 				dataGridView1.DataSource = bss.ListarDetalleVentaBss();
@@ -88,23 +93,18 @@ namespace SistemasVentas.VISTA.DetalleVentaVistas
 			string consulta = "SELECT DETALLEVENTA.IDDETALLEVENTA, VENTA.FECHA, PRODUCTO.NOMBRE AS PRODUCTO, DETALLEVENTA.CANTIDAD, DETALLEVENTA.PRECIOVENTA, DETALLEVENTA.SUBTOTAL, DETALLEVENTA.ESTADO FROM DETALLEVENTA INNER JOIN VENTA ON DETALLEVENTA.IDVENTA = VENTA.IDVENTA INNER JOIN PRODUCTO ON DETALLEVENTA.IDPRODUCTO = PRODUCTO.IDPRODUCTO";
 			DataTable datos = conexion.EjecutarDataTabla(consulta, "tabla");
 
-			// Generar el documento PDF
+
 			GenerarDocumentoPDF(datos);
 		}
 		private void GenerarDocumentoPDF(DataTable datos)
 		{
-			// Crear un nuevo documento PDF
 			string nombreArchivo = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "detalle_venta.pdf");
 			PdfWriter pdfWriter = new PdfWriter(nombreArchivo);
 			PdfDocument pdfDocument = new PdfDocument(pdfWriter);
 			Document documento = new Document(pdfDocument);
-
-			// Agregar título al documento
 			Paragraph titulo = new Paragraph("LISTADO DE DETALLE VENTAS");
 			titulo.SetTextAlignment(iText.Layout.Properties.TextAlignment.CENTER);
 			documento.Add(titulo);
-
-			// Agregar tabla con los datos obtenidos
 			iText.Layout.Element.Table tabla = new iText.Layout.Element.Table(datos.Columns.Count);
 			foreach (DataColumn columna in datos.Columns)
 			{
@@ -119,55 +119,41 @@ namespace SistemasVentas.VISTA.DetalleVentaVistas
 			}
 			documento.Add(tabla);
 
-			// Cerrar el documento
 			documento.Close();
 
 			MessageBox.Show("El listado de detalle venta se guardo correctamente");
+
 		}
 
 		private void btnGuardarExcel_Click(object sender, EventArgs e)
 		{
-			// Obtener los datos de la consulta SQL
 			string consulta = "SELECT DETALLEVENTA.IDDETALLEVENTA, VENTA.FECHA, PRODUCTO.NOMBRE AS PRODUCTO, DETALLEVENTA.CANTIDAD, DETALLEVENTA.PRECIOVENTA, DETALLEVENTA.SUBTOTAL, DETALLEVENTA.ESTADO FROM DETALLEVENTA INNER JOIN VENTA ON DETALLEVENTA.IDVENTA = VENTA.IDVENTA INNER JOIN PRODUCTO ON DETALLEVENTA.IDPRODUCTO = PRODUCTO.IDPRODUCTO";
 			DataTable datos = conexion.EjecutarDataTabla(consulta, "tabla");
-
-			// Guardar los datos en un archivo de Excel
 			GuardarExcel(datos);
 		}
 		private void GuardarExcel(DataTable datos)
 		{
-			// Crear un nuevo libro de Excel
 			IWorkbook workbook = new XSSFWorkbook();
 			ISheet sheet = workbook.CreateSheet("DetalleVenta");
-
-			// Agregar título al archivo de Excel
 			IRow titleRow = sheet.CreateRow(0);
 			titleRow.CreateCell(0).SetCellValue("Listado de Detalle de Venta");
-
-			// Crear encabezados
 			IRow headerRow = sheet.CreateRow(1);
 			for (int i = 0; i < datos.Columns.Count; i++)
 			{
 				headerRow.CreateCell(i).SetCellValue(datos.Columns[i].ColumnName);
 			}
 
-			// Agregar datos
 			for (int i = 0; i < datos.Rows.Count; i++)
 			{
-				IRow row = sheet.CreateRow(i + 2); // Comenzar desde la fila 2 después del título y los encabezados
+				IRow row = sheet.CreateRow(i + 2);
 				for (int j = 0; j < datos.Columns.Count; j++)
 				{
 					row.CreateCell(j).SetCellValue(datos.Rows[i][j].ToString());
 				}
 			}
 
-			// Obtener la ruta de la carpeta "Documentos" del usuario actual
 			string documentosPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-
-			// Combinar la ruta de la carpeta "Documentos" con el nombre del archivo
 			string rutaArchivo = Path.Combine(documentosPath, "detalles_venta.xlsx");
-
-			// Guardar el libro de Excel en el sistema de archivos
 			using (FileStream fileStream = new FileStream(rutaArchivo, FileMode.Create, FileAccess.Write))
 			{
 				workbook.Write(fileStream);
@@ -291,6 +277,14 @@ namespace SistemasVentas.VISTA.DetalleVentaVistas
 				pServicios.Visible = true;
 			else
 				pServicios.Visible = false;
+		}
+
+		private void button19_Click(object sender, EventArgs e)
+		{
+			this.Hide();
+			LoginIniciarSecionV fr = new LoginIniciarSecionV();
+			fr.Show();
+			fr.FormClosing += frm_closing;
 		}
 	}
 

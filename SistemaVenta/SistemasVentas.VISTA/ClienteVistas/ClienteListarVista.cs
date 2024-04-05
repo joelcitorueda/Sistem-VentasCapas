@@ -13,6 +13,7 @@ using SistemasVentas.VISTA.TipoProdVistas;
 using SistemasVentas.VISTA.UsuarioRolVistas;
 using SistemasVentas.VISTA.UsuarioVistas;
 using SistemasVentas.VISTA.VentaVistas;
+using SistemasVentas.VISTA.LoginIniciarSecion;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,6 +28,16 @@ namespace SistemasVentas.VISTA.ClienteVistas
 {
 	public partial class ClienteListarVista : Form
 	{
+
+		public static class DatosCliente
+		{
+			public static DataTable Clientes { get; set; }
+		}
+		private void ClienteListarVista_Loaded(object sender, EventArgs e)
+		{
+			DatosCliente.Clientes = bss.ListarClienteBss();
+			dataGridView1.DataSource = DatosCliente.Clientes;
+		}
 		public ClienteListarVista()
 		{
 			InitializeComponent();
@@ -54,12 +65,21 @@ namespace SistemasVentas.VISTA.ClienteVistas
 		{
 			VentaVistas.VentaInsertarVista.IdClienteSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
 			VentaVistas.VentaEditarVista.IdClienteSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+			ProductoVistasProvee.ProductoBuscarVistaProvee.IdClienteSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
 
 		}
 
 		private void button3_Click(object sender, EventArgs e)
 		{
-			int IdSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+			int IdClienteSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+			ClienteEditarVista fr = new ClienteEditarVista(IdClienteSeleccionada);
+			this.Hide();
+			fr.FormClosing += frm_closing;
+			if (fr.ShowDialog() == DialogResult.OK)
+			{
+				dataGridView1.DataSource = bss.ListarClienteBss();
+			}
+			/*int IdSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
 			ClienteEditarVista fr = new ClienteEditarVista(IdSeleccionada);
 			this.Hide();
 			fr.FormClosing += frm_closing;
@@ -67,13 +87,13 @@ namespace SistemasVentas.VISTA.ClienteVistas
 			{
 				dataGridView1.DataSource = bss.ListarClienteBss();
 
-			}
+			}*/
 		}
 
 		private void button4_Click(object sender, EventArgs e)
 		{
 			int IdSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
-			DialogResult result = MessageBox.Show("¿Esta seguro de Eliminar este Cliente?", "Eliminando", MessageBoxButtons.YesNo);
+			DialogResult result = MessageBox.Show("¿Esta seguro de Eliminar este DetalleIng?", "Eliminando", MessageBoxButtons.YesNo);
 			if (result == DialogResult.Yes)
 			{
 				bss.EliminarClienteBss(IdSeleccionada);
@@ -197,5 +217,16 @@ namespace SistemasVentas.VISTA.ClienteVistas
 			fr.Show();
 			fr.FormClosing += frm_closing;
 		}
+
+		private void button19_Click(object sender, EventArgs e)
+		{
+			this.Hide();
+			LoginIniciarSecionV fr = new LoginIniciarSecionV();
+			fr.Show();
+			fr.FormClosing += frm_closing;
+		}
+		
+
+
 	}
 }

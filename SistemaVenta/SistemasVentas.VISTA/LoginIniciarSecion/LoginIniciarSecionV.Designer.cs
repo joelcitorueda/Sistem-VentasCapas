@@ -1,6 +1,6 @@
 ﻿namespace SistemasVentas.VISTA.LoginIniciarSecion
 {
-	partial class LoginIniciarSecion
+	partial class LoginIniciarSecionV
 	{
 		/// <summary>
 		/// Required designer variable.
@@ -28,7 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginIniciarSecion));
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginIniciarSecionV));
 			pictureBox1 = new PictureBox();
 			pictureBox2 = new PictureBox();
 			pictureBox3 = new PictureBox();
